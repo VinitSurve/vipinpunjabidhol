@@ -3,7 +3,8 @@
 import Footer from "@/components/layout/Footer";
 import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import InstagramIcon from "@/components/ui/InstagramIcon";
-
+import TelephoneIcon from "@/components/ui/TelephoneIcon";
+import LocationIcon from "@/components/ui/LocationIcon";
 export default function ContactPage() {
   return (
     <>
@@ -22,10 +23,8 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
           <div className="lg:col-span-4 flex flex-col gap-gutter">
             <div className="bg-surface-container p-8 border border-outline/20 relative overflow-hidden group">
-              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                <span className="material-symbols-outlined text-primary !text-6xl">
-                  call
-                </span>
+              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
+                <TelephoneIcon className="w-16 h-16" />
               </div>
               <h3 className="font-label-caps text-label-caps text-primary mb-4 tracking-widest">
                 DIRECT LINE
@@ -42,7 +41,7 @@ export default function ContactPage() {
             </div>
 
             <div className="bg-surface-container p-8 border border-outline/20 relative overflow-hidden group">
-              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+              <div className="absolute top-0 right-0 p-4 opacity-30 group-hover:opacity-60 transition-opacity">
                 <span className="material-symbols-outlined text-primary !text-6xl">
                   chat
                 </span>
@@ -66,9 +65,7 @@ export default function ContactPage() {
                 LOCATION & SOCIAL
               </h3>
               <div className="flex items-start gap-4 mb-6">
-                <span className="material-symbols-outlined text-primary mt-1">
-                  location_on
-                </span>
+                <LocationIcon className="w-5 h-5 mt-1" />
                 <div>
                   <p className="font-body-md text-body-md text-on-surface">
                     Kharghar, Navi Mumbai
@@ -95,7 +92,7 @@ export default function ContactPage() {
             <form className="flex flex-col gap-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
                 <div className="flex flex-col gap-2">
-                  <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant" htmlFor="name">
+                  <label className="font-label-caps text-xs tracking-[0.15em] uppercase text-on-surface-variant" htmlFor="name">
                     Full Name
                   </label>
                   <input
@@ -106,7 +103,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant" htmlFor="phone">
+                  <label className="font-label-caps text-xs tracking-[0.15em] uppercase text-on-surface-variant" htmlFor="phone">
                     Phone Number
                   </label>
                   <input
@@ -120,7 +117,7 @@ export default function ContactPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
                 <div className="flex flex-col gap-2 relative">
-                  <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant" htmlFor="event_type">
+                  <label className="font-label-caps text-xs tracking-[0.15em] uppercase text-on-surface-variant" htmlFor="event_type">
                     Event Type
                   </label>
                   <select
@@ -149,21 +146,21 @@ export default function ContactPage() {
                   </span>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant" htmlFor="date">
+                  <label className="font-label-caps text-xs tracking-[0.15em] uppercase text-on-surface-variant" htmlFor="date">
                     Event Date
                   </label>
                   <input
                     id="date"
                     type="date"
                     required
-                    className="w-full bg-transparent border-0 border-b border-secondary/20 py-2 px-0 text-on-surface font-body-md focus:outline-none focus:ring-0 focus:border-primary transition-colors cursor-pointer [color-scheme:dark]"
+                    className="w-full bg-transparent border-0 border-b border-secondary/20 py-2 px-0 text-on-surface font-body-md focus:outline-none focus:ring-0 focus:border-primary transition-colors cursor-pointer [color-scheme:light]"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
                 <div className="flex flex-col gap-2">
-                  <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant" htmlFor="location">
+                  <label className="font-label-caps text-xs tracking-[0.15em] uppercase text-on-surface-variant" htmlFor="location">
                     Event Location / Venue
                   </label>
                   <input
@@ -175,7 +172,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant" htmlFor="guests">
+                  <label className="font-label-caps text-xs tracking-[0.15em] uppercase text-on-surface-variant" htmlFor="guests">
                     Estimated Guests
                   </label>
                   <input
@@ -189,7 +186,7 @@ export default function ContactPage() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant" htmlFor="requirements">
+                <label className="font-label-caps text-xs tracking-[0.15em] uppercase text-on-surface-variant" htmlFor="requirements">
                   Special Requirements & Details
                 </label>
                 <textarea

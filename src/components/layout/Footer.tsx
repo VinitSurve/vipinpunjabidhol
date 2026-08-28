@@ -3,7 +3,8 @@
 import BrandLogo from "../ui/BrandLogo";
 import Link from "next/link";
 import InstagramIcon from "../ui/InstagramIcon";
-
+import TelephoneIcon from "../ui/TelephoneIcon";
+import LocationIcon from "../ui/LocationIcon";
 export default function Footer() {
   return (
     <footer className="w-full bg-background border-t border-secondary/10 pt-16 md:pt-24 pb-8 px-margin-mobile md:px-margin-desktop relative z-10">
@@ -33,12 +34,18 @@ export default function Footer() {
 
           {/* Right: Contact Info */}
           <div className="flex flex-col gap-3 md:items-end text-left md:text-right">
-            <a href="tel:7206110529" className="font-label-caps text-[11px] tracking-[0.15em] text-on-surface hover:text-primary transition-colors">7206110529</a>
+            <a href="tel:7206110529" className="flex items-center gap-2 font-label-caps text-[11px] tracking-[0.15em] text-on-surface hover:text-primary transition-colors">
+              <TelephoneIcon className="w-4 h-4" />
+              7206110529
+            </a>
             <a href="https://www.instagram.com/vipin_dhol_events_?igsi=aTJrdWIxYnBxcW05" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-label-caps text-[11px] tracking-[0.15em] text-on-surface hover:text-primary transition-colors">
               <InstagramIcon className="w-4 h-4" />
               @VIPIN_DHOL_EVENTS_
             </a>
-            <p className="font-label-caps text-[11px] tracking-[0.15em] text-on-surface-variant">KHARGHAR, NAVI MUMBAI</p>
+            <p className="flex items-center gap-2 font-label-caps text-[11px] tracking-[0.15em] text-on-surface-variant">
+              <LocationIcon className="w-4 h-4" />
+              KHARGHAR, NAVI MUMBAI
+            </p>
           </div>
         </div>
 
@@ -55,8 +62,10 @@ export default function Footer() {
             <p className="font-label-caps text-[9px] md:text-[10px] tracking-[0.2em] text-on-surface-variant uppercase">
               © 2026 VIPIN PUNJABI DHOL & EVENTS
             </p>
-            <p className="font-label-caps text-[8px] tracking-[0.1em] text-on-surface/40 hover:text-on-surface-variant transition-colors">
+            <p className="font-label-caps text-[8px] tracking-[0.1em] text-on-surface/40 hover:text-on-surface-variant transition-colors flex flex-col gap-1">
               <a href="https://www.flaticon.com/free-icons/instagram" title="instagram icons" target="_blank" rel="noopener noreferrer">Instagram icons created by Magnific - Flaticon</a>
+              <a href="https://www.flaticon.com/free-icons/telephone" title="telephone icons" target="_blank" rel="noopener noreferrer">Telephone icons created by Ricardo Ruiz - Flaticon</a>
+              <a href="https://www.flaticon.com/free-icons/locations" title="locations icons" target="_blank" rel="noopener noreferrer">Locations icons created by Magnific - Flaticon</a>
             </p>
           </div>
           <p className="font-label-caps text-[9px] md:text-[10px] tracking-[0.2em] text-on-surface-variant uppercase">

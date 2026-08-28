@@ -153,7 +153,7 @@ export default function GanpatiPage() {
                   {/* Name and Phone */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
                     <div className="flex flex-col gap-2">
-                      <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant">
+                      <label className="font-label-caps text-xs tracking-[0.15em] uppercase text-on-surface-variant">
                         Full Name
                       </label>
                       <input 
@@ -162,7 +162,7 @@ export default function GanpatiPage() {
                       />
                     </div>
                     <div className="flex flex-col gap-2">
-                      <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant">
+                      <label className="font-label-caps text-xs tracking-[0.15em] uppercase text-on-surface-variant">
                         WhatsApp / Phone
                       </label>
                       <input 
@@ -175,7 +175,7 @@ export default function GanpatiPage() {
                   {/* Event Date & Location */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mt-2">
                     <div className="flex flex-col gap-2">
-                      <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant">
+                      <label className="font-label-caps text-xs tracking-[0.15em] uppercase text-on-surface-variant">
                         Event Date
                       </label>
                       <input 
@@ -184,7 +184,7 @@ export default function GanpatiPage() {
                       />
                     </div>
                     <div className="flex flex-col gap-2">
-                      <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant">
+                      <label className="font-label-caps text-xs tracking-[0.15em] uppercase text-on-surface-variant">
                         Event Location
                       </label>
                       <input 
