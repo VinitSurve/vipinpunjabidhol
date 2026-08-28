@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Metadata } from "next";
-import BrandLogo from "@/components/ui/BrandLogo";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
@@ -10,236 +9,182 @@ export const metadata: Metadata = {
 export default function GanpatiPage() {
   return (
     <>
-      {/* Campaign Hero */}
-      <header className="relative min-h-screen flex items-center justify-center pt-24 px-margin-mobile md:px-margin-desktop overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div
-            className="bg-cover bg-center w-full h-full opacity-40"
-            data-alt="A grand, cinematic scene of a vibrant Ganpati festival in Mumbai, illuminated by warm, golden street lights and firecrackers. A group of highly energetic Punjabi Dhol players in traditional gold and black premium attire are performing passionately in the foreground. High contrast, luxury editorial style, deep obsidian shadows with radiant metallic gold highlights."
-            style={{
-              backgroundImage:
-                "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDaiYNtXRC0m_RjF7p5pPBfcxVBf5fNCtjXZyCyoyTP__0KoBl4lsil6FJ7FGErdYgZYwz_7DwWBlIhvUuPeVtOtzt_-vrnpasVzGJ24rWfqACBQKEZEXtL6Uqmn3pncj1VTzV3FsvFQr1286eNFZ4Fe1ZP_9qE5S_ZhmyoDiA6WerH67-9rX-63LoHM0I6-NDYXSZ5TJjRFmQhBBzwId95obmDt7KXdLBrHIuR2Te-PANqMlCSMGn1')",
-            }}
-          ></div>
-
-        </div>
-        <div className="relative z-10 text-center max-w-4xl mx-auto flex flex-col items-center">
-          <BrandLogo variant="hero" className="mb-8 drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]" />
-          <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">
-            GANPATI 2026<br />
-            <span className="text-on-surface">BRING THE BEAT</span>
-          </h1>
-          <p className="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl">
-            Elevate your Ganpati celebrations with the most powerful, high-energy Punjabi Dhol performances in Mumbai. A premium cultural experience.
-          </p>
-          <button className="font-cta text-cta bg-primary-container text-on-primary-container px-8 py-4 hover:bg-secondary-fixed transition-colors shadow-[0_0_20px_rgba(212,175,55,0.15)] uppercase">
-            Secure Your Date
-          </button>
-        </div>
-      </header>
-
-      {/* Service Highlight */}
-      <section className="py-section-gap px-margin-mobile md:px-margin-desktop texture-bg relative">
-        <div className="max-w-container-max mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-headline-xl text-headline-xl text-primary mb-4">
-              Premium Services
-            </h2>
-            <div className="w-24 h-1 bg-primary/20 mx-auto"></div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
-            {/* Service 1 */}
-            <div className="relative aspect-[3/4] group overflow-hidden border border-primary-container/30 bg-surface-container-low hover:border-primary-container transition-colors duration-500">
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-60"
-                data-alt="A close-up, high-end editorial shot of a beautifully carved traditional Punjabi Dhol instrument. The wood has intricate details, and the tension cords are tight. Warm, spotlight illumination against a pitch-black background, highlighting the metallic gold accents and textured wood grain. Minimalist luxury aesthetic."
-                style={{
-                  backgroundImage:
-                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDNIcGOp7VLC_A-XR5-rfleuIfVvF9ZJ55fcJn91emwOOBV1AoHMf4eAzMYJRlGcnn9yDH7wU-5ewIPEvD6M5Vda0Mx1eMesvfVQ4K3u9G-rPOHhroBwoFiRyM6dT9N3vMKGDwz9KQ2M5hLK12gxjnFmpx1hnErVo2eSzE5cDnLmUU4gNmmPRH7bVyVzLXUs3fh_4Ah2alKyveXfrfYYnt7ips9wnkkmE-BFdCrf4PbnKKNIPWVhilh')",
-                }}
-              ></div>
-
-              <div className="absolute bottom-0 left-0 w-full p-6">
-                <h3 className="font-headline-lg text-headline-lg text-primary mb-2">
-                  Punjabi Dhol
-                </h3>
-                <p className="font-body-md text-body-md text-on-surface-variant line-clamp-2">
-                  Authentic, heart-pounding traditional rhythms.
-                </p>
-              </div>
+      <main className="min-h-screen pt-24 bg-background">
+        
+        {/* 1. Ganpati Hero */}
+        <section className="py-12 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
+          
+          {/* Hero Left Content */}
+          <div className="flex flex-col items-start gap-6 order-2 md:order-1">
+            <div className="bg-surface-container-low px-4 py-2 font-label-caps text-[10px] text-on-surface-variant uppercase tracking-[0.2em]">
+              ADVANCE BOOKING OPEN
             </div>
-            {/* Service 2 */}
-            <div className="relative aspect-[3/4] group overflow-hidden border border-outline/20 bg-surface-container-low hover:border-primary-container transition-colors duration-500">
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-60"
-                data-alt="A dynamic, long-exposure photograph of LED Dhols being played at night. Bright, luminous streaks of gold and warm white light trace the drummers' energetic movements against a deep, dark obsidian background. High-contrast cinematic style, feeling modern and electrifying."
-                style={{
-                  backgroundImage:
-                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVdXprMto7zG6aCirDgfvgTWExoiPP-NBCt_HWqGY4J033QZdTPYeL3owLeiHffxvxWQ8so_mtclF5Bn7dsgc76MYL4BE7UNPAgoxF0aU8BfN7g3pZK0DnEbSNYtE983VXJ29NVziPW2oHfldKjp2-OOvyEKZw9s9HriQIlagGJHcwj8SfPIkI3Wf3IjCJ4bFN_ysh0uKcqi9VXjQ_1gyqIbo1z5HEV9cVkkrooiADeQ2VIqhzToTu')",
-                }}
-              ></div>
-
-              <div className="absolute bottom-0 left-0 w-full p-6">
-                <h3 className="font-headline-lg text-headline-lg text-primary mb-2">
-                  LED Dhol
-                </h3>
-                <p className="font-body-md text-body-md text-on-surface-variant line-clamp-2">
-                  A visual spectacle for high-end night processions.
-                </p>
-              </div>
-            </div>
-            {/* Service 3 */}
-            <div className="relative aspect-[3/4] group overflow-hidden border border-outline/20 bg-surface-container-low hover:border-primary-container transition-colors duration-500">
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-60"
-                data-alt="A highly stylized, slow-motion capture of a Bhangra dancer mid-air, wearing exquisite, premium traditional attire with subtle gold embroidery. The lighting is dramatic, casting deep shadows that emphasize the movement and cultural richness. The overall tone is luxurious and powerful, set against a dark studio background."
-                style={{
-                  backgroundImage:
-                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAsMsju0LUex1e9nzHIh7FjddKGpRLMVWVEQ40Z0u1qbSc22ago_euNrCwmhMou8syV5iLXhrYSLJnwzqq9poFvnbD605S6ztMxWnHsr8x9R1-dJMAGOHNI8C7TFuzT2p6_VL1tYjlLcAg1zFuISPAmMBufUncQdeu8_V6G0_dM6CuCFyFCcE2vTXGp7cjAGyqXNqWCcQVCn9ZHvdQcsqYAOy0j8tcCFXVQkqkLxeR4Qua1mBV-JxSy')",
-                }}
-              ></div>
-
-              <div className="absolute bottom-0 left-0 w-full p-6">
-                <h3 className="font-headline-lg text-headline-lg text-primary mb-2">
-                  Bhangra
-                </h3>
-                <p className="font-body-md text-body-md text-on-surface-variant line-clamp-2">
-                  Professional dancers bringing the ultimate energy.
-                </p>
-              </div>
-            </div>
-            {/* Service 4 */}
-            <div className="relative aspect-[3/4] group overflow-hidden border border-outline/20 bg-surface-container-low hover:border-primary-container transition-colors duration-500">
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-60"
-                data-alt="A sleek, modern DJ setup integrated seamlessly with traditional acoustic Dhol drums. The scene is lit with sophisticated club lighting in warm gold tones, creating a luxury fusion atmosphere. The image captures the modern, high-energy vibe of a contemporary premium event."
-                style={{
-                  backgroundImage:
-                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqJoH_qCDtS_HrQuSJG1zPYYzcbj_pzU6ST-58HoZjUPsrcWjvSfVZD9pyAYL0OnejQXCwMVVTIy8LjN7ivYLnNpGIjLvwM6sp7AgeThzyCkB2IMmxZ2HQKJoMUeymY-Kpto4m2qX6byGl_naTvoDpnIV4EC2CLB9qbzkdkyY_UvvzCGIAzzDMDQOAhp__bu1YdO8Qnem6lOtbdYj1hbBUhgMvXRPSrHtyQ4NrLfOa7WgUFikr0fQq')",
-                }}
-              ></div>
-
-              <div className="absolute bottom-0 left-0 w-full p-6">
-                <h3 className="font-headline-lg text-headline-lg text-primary mb-2">
-                  DJ Mix Dhol
-                </h3>
-                <p className="font-body-md text-body-md text-on-surface-variant line-clamp-2">
-                  The perfect fusion of electronic beats and live percussion.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust / Energy Section */}
-      <section className="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
-        <div className="max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-16">
-          <div className="w-full md:w-1/2">
-            <div className="relative aspect-square border border-primary-container/20 p-4">
-              <div
-                className="w-full h-full bg-cover bg-center filter grayscale contrast-125 hover:grayscale-0 transition-all duration-1000"
-                data-alt="A massive, beautifully adorned Ganpati idol during a lavish Mumbai street procession. In the immediate foreground, out of focus, is the powerful silhouette of a Dhol player raising his sticks. The scene is bathed in an ethereal, golden, dusty light, conveying a sense of divine energy and grand scale, shot in a high-contrast cinematic style."
-                style={{
-                  backgroundImage:
-                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDsDaf-1qosYARK1ZtgQnThdxqOoAKbJBn7NDPsvujfS00rIecIfn5XSg-ZNygD1sJppOu443OyuivOKQrHKBYg17vsFV-hVQsRpSGxRbsdzr_fOmbFqfnSORJ4Tvh5j1TuIpJ8DSQsY51da4mQhYywPXr89C4yaxH9ypE2JKR_q-h8BaWgWIuhco1Sz7A9CBcegoSfdI2ToZvWSRSWj4HWAb7IxXLfE6OqI7t8SiNsc5M11BR3Gm82')",
-                }}
-              ></div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary-container flex items-center justify-center rounded-full z-10 shadow-[0_0_30px_rgba(212,175,55,0.2)]">
-                <span className="font-display-lg text-headline-lg text-on-primary-container text-center leading-tight">
-                  10+<br />
-                  <span className="text-xs font-label-caps">Years</span>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="w-full md:w-1/2 flex flex-col items-start">
-            <h2 className="font-display-lg-mobile md:font-display-lg text-headline-xl md:text-display-lg-mobile text-on-surface mb-6 leading-tight">
-              Make your Ganpati unforgettable with the ultimate Punjabi celebration energy.
-            </h2>
-            <p className="font-body-lg text-body-lg text-on-surface-variant mb-8">
-              We don't just play music; we curate an atmosphere of unmatched excitement and luxury. Our highly trained professionals ensure your procession stands out with rhythmic precision and visual grandeur.
+            
+            <h1 className="font-headline-xl text-[56px] md:text-[72px] lg:text-[96px] text-on-surface leading-[1.05] tracking-tight">
+              GANPATI<br />
+              2026<br />
+              <span className="text-primary italic font-light">Bring the Beat.</span>
+            </h1>
+            
+            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-lg mb-4">
+              Experience the raw energy of authentic Punjabi Dhol infused with modern flair. Bring a powerful rhythm to your Ganpati celebration with a performance crafted to make the moment unforgettable.
             </p>
-            <div className="flex items-center gap-4">
-              <span
-                className="material-symbols-outlined text-primary text-3xl"
-                style={{ fontVariationSettings: "'FILL' 1" }}
-              >
-                verified
-              </span>
-              <span className="font-label-caps text-label-caps text-on-surface">
-                Trusted by Premium Mumbai Event Planners
-              </span>
+            
+            <Link className="btn-primary mt-2" href="#enquiry">
+              CHECK YOUR DATE
+            </Link>
+          </div>
+
+          {/* Hero Right Image */}
+          <div className="order-1 md:order-2 relative aspect-square lg:aspect-[4/5] w-full overflow-hidden">
+            <img 
+              src="/images/ganpati-fusion.png" 
+              alt="Ganpati 2026 Celebration" 
+              className="absolute inset-0 w-full h-full object-cover object-center" 
+            />
+          </div>
+        </section>
+
+        {/* 2. Signature Experiences */}
+        <section className="py-section-gap px-margin-mobile md:px-margin-desktop bg-background text-center">
+          <div className="max-w-[1440px] mx-auto">
+            <span className="font-label-caps text-label-caps text-primary tracking-[0.2em] uppercase block mb-6">
+              SIGNATURE EXPERIENCES
+            </span>
+            <h2 className="font-headline-xl text-[48px] md:text-[64px] text-on-surface leading-[1.1] mb-16 md:mb-24">
+              Rhythms Crafted for the<br />Divine
+            </h2>
+            
+            {/* Asymmetric Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-left">
+              
+              {/* Row 1, Col 1: Text Card (Authentic Punjabi Dhol) */}
+              <div className="bg-surface px-8 py-12 border border-secondary/10 flex flex-col items-start gap-6 h-full min-h-[320px] shadow-[0_4px_30px_rgba(0,0,0,0.02)]">
+                <span className="material-symbols-outlined text-primary text-2xl">music_note</span>
+                <h3 className="font-headline-lg text-headline-lg text-on-surface">Authentic Punjabi Dhol</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant">
+                  The timeless, thunderous beats that define celebration. Executed by master percussionists draped in heritage attire.
+                </p>
+              </div>
+
+              {/* Row 1, Col 2: Image (Dhol B&W) */}
+              <div className="relative aspect-square md:aspect-auto w-full h-full overflow-hidden">
+                <img 
+                  src="/images/ganpati-dhol.png" 
+                  alt="Traditional Punjabi Dhol" 
+                  className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 cursor-pointer" 
+                />
+              </div>
+
+              {/* Row 1, Col 3: Text Card (LED Dhol) */}
+              <div className="bg-surface px-8 py-12 border border-secondary/10 flex flex-col items-start gap-6 h-full min-h-[320px] shadow-[0_4px_30px_rgba(0,0,0,0.02)]">
+                <span className="material-symbols-outlined text-primary text-2xl">lightbulb</span>
+                <h3 className="font-headline-lg text-headline-lg text-on-surface">LED Dhol</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant mb-6">
+                  A modern spectacle. Illuminated performances designed for night immersions.
+                </p>
+                <div className="mt-auto">
+                  <Link className="font-cta text-[10px] text-on-surface border-b border-on-surface/30 pb-0.5 hover:border-on-surface transition-colors flex items-center uppercase tracking-widest" href="#enquiry">
+                    EXPLORE
+                  </Link>
+                </div>
+              </div>
+
+              {/* Row 2, Col 1: Text Card (Bhangra Troupe) */}
+              <div className="bg-surface px-8 py-12 border border-secondary/10 flex flex-col items-start gap-6 h-full min-h-[320px] shadow-[0_4px_30px_rgba(0,0,0,0.02)]">
+                <span className="material-symbols-outlined text-primary text-2xl">celebration</span>
+                <h3 className="font-headline-lg text-headline-lg text-on-surface">Bhangra Troupe</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant mb-6">
+                  Elevate the energy with synchronized, high-octane Bhangra dancers accompanying the rhythm.
+                </p>
+                <div className="mt-auto">
+                  <Link className="font-cta text-[10px] text-on-surface border-b border-on-surface/30 pb-0.5 hover:border-on-surface transition-colors flex items-center uppercase tracking-widest" href="#enquiry">
+                    EXPLORE
+                  </Link>
+                </div>
+              </div>
+
+              {/* Row 2, Col 2: Image (Fusion/DJ) */}
+              <div className="relative aspect-square md:aspect-auto w-full h-full overflow-hidden">
+                <img 
+                  src="/images/ganpati-hero.png" 
+                  alt="DJ Mix Dhol Fusion" 
+                  className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 cursor-pointer" 
+                />
+              </div>
+
+              {/* Row 2, Col 3: Text Card (DJ Mix Dhol Fusion) */}
+              <div className="bg-surface px-8 py-12 border border-secondary/10 flex flex-col items-start gap-6 h-full min-h-[320px] shadow-[0_4px_30px_rgba(0,0,0,0.02)]">
+                <span className="material-symbols-outlined text-primary text-2xl">headphones</span>
+                <h3 className="font-headline-lg text-headline-lg text-on-surface">DJ Mix Dhol Fusion</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant">
+                  The ultimate crossover. Live dhol rhythms seamlessly blended with contemporary electronic beats for a truly modern Ganpati vibe.
+                </p>
+              </div>
+
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Strong Booking Section */}
-      <section className="py-section-gap px-margin-mobile md:px-margin-desktop relative">
-        <div className="absolute inset-0 texture-bg opacity-50 z-0"></div>
-        <div className="max-w-3xl mx-auto relative z-10 bg-surface-container-low border border-primary-container/30 p-8 md:p-16 text-center">
-          <h2 className="font-display-lg-mobile md:font-display-lg text-headline-xl text-primary mb-4">
-            CHECK YOUR DATE
-          </h2>
-          <p className="font-body-md text-body-md text-on-surface-variant mb-12">
-            Ganpati 2026 slots are filling fast for premium dates. Secure the best Dhol team in Mumbai today.
-          </p>
-          <form className="space-y-8 text-left max-w-md mx-auto">
-            <div>
-              <label className="font-label-caps text-label-caps text-on-surface-variant block mb-2">
-                Event Date
-              </label>
-              <input
-                className="w-full bg-transparent border-0 border-b border-outline text-on-surface py-2 focus:ring-0 focus:border-primary-container transition-colors font-body-md text-body-md"
-                type="date"
-              />
-            </div>
-            <div>
-              <label className="font-label-caps text-label-caps text-on-surface-variant block mb-2">
-                Location
-              </label>
-              <input
-                className="w-full bg-transparent border-0 border-b border-outline text-on-surface py-2 focus:ring-0 focus:border-primary-container transition-colors font-body-md text-body-md"
-                placeholder="e.g., Kharghar, Navi Mumbai"
-                type="text"
-              />
-            </div>
-            <div className="pt-6">
-              <button
-                className="w-full font-cta text-cta bg-primary-container text-on-primary-container py-4 uppercase hover:bg-secondary-fixed transition-colors shadow-[0_0_15px_rgba(212,175,55,0.1)]"
-                type="button"
-              >
-                Inquire Availability
-              </button>
-            </div>
-            <div className="flex justify-center gap-6 mt-8">
-              <a className="flex flex-col items-center gap-2 group" href="tel:7206110529">
-                <span
-                  className="material-symbols-outlined text-outline group-hover:text-primary transition-colors"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
-                >
-                  call
-                </span>
-                <span className="font-label-caps text-label-caps text-on-surface-variant group-hover:text-primary transition-colors text-[10px]">
-                  Call
-                </span>
-              </a>
-              <a className="flex flex-col items-center gap-2 group" href="https://wa.me/917206110529">
-                <span
-                  className="material-symbols-outlined text-outline group-hover:text-primary transition-colors"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
-                >
-                  chat
-                </span>
-                <span className="font-label-caps text-label-caps text-on-surface-variant group-hover:text-primary transition-colors text-[10px]">
-                  WhatsApp
-                </span>
-              </a>
-            </div>
-          </form>
-        </div>
-      </section>
+        {/* 3. Secure Your Date */}
+        <section id="enquiry" className="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest flex items-center justify-center">
+          <div className="w-full max-w-4xl bg-surface border border-secondary/10 px-8 py-16 md:px-16 md:py-24 text-center shadow-[0_10px_50px_rgba(0,0,0,0.02)]">
+            <h2 className="font-headline-xl text-[48px] md:text-[64px] text-on-surface leading-[1.05] mb-4">
+              Secure Your Date
+            </h2>
+            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto mb-16">
+              Planning your Ganpati celebration? Share your date and preferred experience, and we'll get back to you with availability.
+            </p>
+            
+            <form className="max-w-2xl mx-auto text-left flex flex-col gap-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div className="flex flex-col gap-3">
+                  <label className="font-label-caps text-[11px] tracking-[0.15em] uppercase text-on-surface-variant">
+                    Full Name
+                  </label>
+                  <input 
+                    type="text"
+                    className="w-full bg-transparent border-0 border-b border-secondary/20 py-2 px-0 text-on-surface font-body-md focus:border-on-surface focus:ring-0 transition-colors"
+                  />
+                </div>
+                <div className="flex flex-col gap-3">
+                  <label className="font-label-caps text-[11px] tracking-[0.15em] uppercase text-on-surface-variant">
+                    Phone Number
+                  </label>
+                  <input 
+                    type="tel"
+                    className="w-full bg-transparent border-0 border-b border-secondary/20 py-2 px-0 text-on-surface font-body-md focus:border-on-surface focus:ring-0 transition-colors"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col gap-3">
+                <label className="font-label-caps text-[11px] tracking-[0.15em] uppercase text-on-surface-variant">
+                  Select Experience
+                </label>
+                <div className="relative">
+                  <select defaultValue="" className="w-full bg-transparent border-0 border-b border-secondary/20 py-2 px-0 text-on-surface font-body-md focus:border-on-surface focus:ring-0 transition-colors appearance-none cursor-pointer">
+                    <option value="" disabled></option>
+                    <option value="authentic">Authentic Punjabi Dhol</option>
+                    <option value="led">LED Dhol</option>
+                    <option value="bhangra">Bhangra Troupe</option>
+                    <option value="fusion">DJ Mix Dhol Fusion</option>
+                  </select>
+                  <span className="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">
+                    keyboard_arrow_down
+                  </span>
+                </div>
+              </div>
+              
+              <div className="mt-8 flex justify-center">
+                <button type="submit" className="bg-on-surface text-background font-label-caps text-[11px] tracking-[0.2em] uppercase px-12 py-5 hover:bg-primary hover:text-on-primary transition-colors">
+                  SUBMIT ENQUIRY
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+        
+      </main>
       <Footer variant="simple" />
     </>
   );
