@@ -127,60 +127,113 @@ export default function GanpatiPage() {
         </section>
 
         {/* 3. Secure Your Date */}
-        <section id="enquiry" className="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest flex items-center justify-center">
-          <div className="w-full max-w-4xl bg-surface border border-secondary/10 px-8 py-16 md:px-16 md:py-24 text-center shadow-[0_10px_50px_rgba(0,0,0,0.02)]">
-            <h2 className="font-headline-xl text-[48px] md:text-[64px] text-on-surface leading-[1.05] mb-4">
-              Secure Your Date
-            </h2>
-            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto mb-16">
-              Planning your Ganpati celebration? Share your date and preferred experience, and we'll get back to you with availability.
-            </p>
+        <section id="enquiry" className="py-section-gap px-margin-mobile md:px-margin-desktop bg-background border-t border-secondary/10">
+          <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             
-            <form className="max-w-2xl mx-auto text-left flex flex-col gap-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div className="flex flex-col gap-3">
-                  <label className="font-label-caps text-[11px] tracking-[0.15em] uppercase text-on-surface-variant">
-                    Full Name
-                  </label>
-                  <input 
-                    type="text"
-                    className="w-full bg-transparent border-0 border-b border-secondary/20 py-2 px-0 text-on-surface font-body-md focus:border-on-surface focus:ring-0 transition-colors"
-                  />
+            {/* Left Column: Editorial Heading */}
+            <div className="flex flex-col items-start pt-8 lg:pt-16">
+              <span className="font-label-caps text-[10px] tracking-[0.2em] text-primary uppercase mb-6 block">
+                PLAN YOUR CELEBRATION
+              </span>
+              <h2 className="font-headline-xl text-[48px] md:text-[64px] text-on-surface leading-[1.05] mb-6">
+                SECURE YOUR DATE.
+              </h2>
+              <p className="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                Planning your Ganpati celebration? Share your date and preferred experience, and we'll get back to you with availability.
+              </p>
+            </div>
+            
+            {/* Right Column: Compact Form Panel */}
+            <div className="bg-surface border border-secondary/15 shadow-[0_30px_80px_-15px_rgba(0,0,0,0.08)] ring-1 ring-inset ring-white/50 p-8 md:p-12 relative">
+              <form className="flex flex-col gap-12">
+                
+                {/* Section 1: Your Details & Event Date */}
+                <div className="flex flex-col gap-8">
+                  
+                  {/* Name and Phone */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+                    <div className="flex flex-col gap-2">
+                      <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant">
+                        Full Name
+                      </label>
+                      <input 
+                        type="text"
+                        className="w-full bg-transparent border-0 border-b border-secondary/20 py-2 px-0 text-on-surface font-body-md focus:outline-none focus:ring-0 focus:border-primary transition-colors"
+                      />
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant">
+                        WhatsApp / Phone
+                      </label>
+                      <input 
+                        type="tel"
+                        className="w-full bg-transparent border-0 border-b border-secondary/20 py-2 px-0 text-on-surface font-body-md focus:outline-none focus:ring-0 focus:border-primary transition-colors"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Event Date (Now under Your Details) */}
+                  <div className="flex flex-col gap-2 mt-2">
+                    <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant">
+                      Event Date
+                    </label>
+                    <input 
+                      type="date"
+                      className="w-full bg-transparent border-0 border-b border-secondary/20 py-2 px-0 text-on-surface font-body-md focus:outline-none focus:ring-0 focus:border-primary transition-colors cursor-pointer"
+                    />
+                  </div>
                 </div>
-                <div className="flex flex-col gap-3">
-                  <label className="font-label-caps text-[11px] tracking-[0.15em] uppercase text-on-surface-variant">
-                    Phone Number
-                  </label>
-                  <input 
-                    type="tel"
-                    className="w-full bg-transparent border-0 border-b border-secondary/20 py-2 px-0 text-on-surface font-body-md focus:border-on-surface focus:ring-0 transition-colors"
-                  />
+
+                {/* Section 2: Choose Your Experience */}
+                <div className="flex flex-col gap-6">
+                  <h3 className="font-label-caps text-[11px] tracking-[0.2em] text-on-surface-variant uppercase border-b border-secondary/10 pb-2">
+                    CHOOSE YOUR EXPERIENCE
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+                    
+                    {/* Option 1 */}
+                    <label className="cursor-pointer relative">
+                      <input type="radio" name="experience" value="authentic" className="peer sr-only" />
+                      <div className="w-full border border-secondary/20 py-4 text-center text-on-surface font-body-sm hover:border-on-surface/50 peer-checked:border-primary peer-checked:bg-primary-container/10 peer-checked:text-primary transition-all">
+                        Authentic Punjabi Dhol
+                      </div>
+                    </label>
+
+                    {/* Option 2 */}
+                    <label className="cursor-pointer relative">
+                      <input type="radio" name="experience" value="led" className="peer sr-only" />
+                      <div className="w-full border border-secondary/20 py-4 text-center text-on-surface font-body-sm hover:border-on-surface/50 peer-checked:border-primary peer-checked:bg-primary-container/10 peer-checked:text-primary transition-all">
+                        LED Dhol
+                      </div>
+                    </label>
+
+                    {/* Option 3 */}
+                    <label className="cursor-pointer relative">
+                      <input type="radio" name="experience" value="bhangra" className="peer sr-only" />
+                      <div className="w-full border border-secondary/20 py-4 text-center text-on-surface font-body-sm hover:border-on-surface/50 peer-checked:border-primary peer-checked:bg-primary-container/10 peer-checked:text-primary transition-all">
+                        Bhangra Troupe
+                      </div>
+                    </label>
+
+                    {/* Option 4 */}
+                    <label className="cursor-pointer relative">
+                      <input type="radio" name="experience" value="fusion" className="peer sr-only" />
+                      <div className="w-full border border-secondary/20 py-4 text-center text-on-surface font-body-sm hover:border-on-surface/50 peer-checked:border-primary peer-checked:bg-primary-container/10 peer-checked:text-primary transition-all">
+                        DJ Mix Dhol Fusion
+                      </div>
+                    </label>
+                    
+                  </div>
                 </div>
-              </div>
-              <div className="flex flex-col gap-3">
-                <label className="font-label-caps text-[11px] tracking-[0.15em] uppercase text-on-surface-variant">
-                  Select Experience
-                </label>
-                <div className="relative">
-                  <select defaultValue="" className="w-full bg-transparent border-0 border-b border-secondary/20 py-2 px-0 text-on-surface font-body-md focus:border-on-surface focus:ring-0 transition-colors appearance-none cursor-pointer">
-                    <option value="" disabled></option>
-                    <option value="authentic">Authentic Punjabi Dhol</option>
-                    <option value="led">LED Dhol</option>
-                    <option value="bhangra">Bhangra Troupe</option>
-                    <option value="fusion">DJ Mix Dhol Fusion</option>
-                  </select>
-                  <span className="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">
-                    keyboard_arrow_down
-                  </span>
+                
+                <div className="mt-4 flex justify-center md:justify-end">
+                  <button type="submit" className="bg-on-surface text-background font-label-caps text-[11px] tracking-[0.2em] uppercase px-12 py-5 hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-2 shadow-[0_0_20px_rgba(0,0,0,0.1)]">
+                    SUBMIT ENQUIRY <span className="font-body-md leading-none">→</span>
+                  </button>
                 </div>
-              </div>
-              
-              <div className="mt-8 flex justify-center">
-                <button type="submit" className="bg-on-surface text-background font-label-caps text-[11px] tracking-[0.2em] uppercase px-12 py-5 hover:bg-primary hover:text-on-primary transition-colors">
-                  SUBMIT ENQUIRY
-                </button>
-              </div>
-            </form>
+              </form>
+            </div>
+            
           </div>
         </section>
         
