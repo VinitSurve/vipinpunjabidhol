@@ -191,34 +191,53 @@ export default function Home() {
       </section>
 
       {/* 10. Final CTA */}
-      <section className="w-full relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center w-full h-full transform scale-105 motion-safe:animate-[pulse_10s_ease-in-out_infinite_alternate]"
-          data-alt="A wide, sweeping cinematic shot of a massive, euphoric crowd dancing at an ultra-luxury wedding Sangeet. The atmosphere is electric, bathed in warm golden and deep obsidian tones. Confetti falling, lights flashing. The visual conveys ultimate celebration and high-end exclusivity."
-          style={{
-            backgroundImage:
-              "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBj_svPXxq5wQ6UtHGValDN1fx45FjTUni9I0QaZafL0C4sO3XJVTB5lUPM4frQrnMWZ5wKHVsj3hEKS60v6EPdyD63Ec4lok7WksX-UTJKLkmr1MOIs4W2KdCdNsnOLU8cpfiwWBhYzVQqbue-_IKNC3UOKEkpA4rUwZuQ95DIqQyKY2ZxSN7OgBKhsxWGuRu8fIuqZAzqbv4TC6a46AH6w7wj72YxN1YRV15B7p1S-QweidG3PqjG')",
-          }}
-        ></div>
-        <div className="absolute inset-0 bg-background/80"></div>
-        <div className="relative z-10 w-full max-w-4xl mx-auto px-margin-mobile text-center">
-          <h2 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-[#FFFDF8] mb-10 leading-tight">
-            YOUR CELEBRATION DESERVES A <span className="text-primary italic">BIGGER BEAT.</span>
-          </h2>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-            <Link className="btn-primary w-full sm:w-auto" href="/contact">
-              BOOK YOUR EVENT
+      <section className="w-full py-section-gap px-margin-mobile md:px-margin-desktop bg-background">
+        <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
+          
+          {/* Content - Left Side */}
+          <div className="flex flex-col items-start justify-center py-12 md:py-0">
+            <span className="font-label-caps text-label-caps text-primary tracking-[0.2em] uppercase mb-8">
+              THE FINAL BEAT
+            </span>
+            <h2 className="font-headline-xl text-[48px] lg:text-[64px] text-on-surface leading-[1.05] mb-8">
+              YOUR CELEBRATION<br />DESERVES TO BE<br /><span className="text-primary italic font-light">REMEMBERED.</span>
+            </h2>
+            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-md mb-12">
+              From intimate gatherings to grand celebrations, bring an unforgettable Punjabi energy to every moment.
+            </p>
+            <Link className="font-cta text-cta text-on-surface border-b border-on-surface/30 pb-1 hover:border-on-surface hover:text-primary transition-colors flex items-center uppercase tracking-widest gap-3 group" href="/contact">
+              LET'S MAKE IT LOUD
+              <span className="material-symbols-outlined text-[14px] group-hover:translate-x-2 transition-transform">arrow_forward</span>
             </Link>
-            <a
-              className="btn-secondary w-full sm:w-auto group !border-[#FFFDF8] !text-[#FFFDF8] hover:!bg-[#FFFDF8] hover:!text-[#171513]"
-              href="https://wa.me/917206110529"
-            >
-              <span className="material-symbols-outlined mr-2 group-hover:text-background transition-colors">
-                chat
-              </span>
-              WHATSAPP US
-            </a>
           </div>
+
+          {/* Image Collage - Right Side */}
+          <div className="grid grid-cols-2 gap-4 lg:gap-6 w-full aspect-[4/5] md:aspect-square lg:aspect-[4/5]">
+            <div className="col-span-1 relative w-full h-full rounded-2xl overflow-hidden">
+              <img
+                className="absolute inset-0 w-full h-full object-cover object-center"
+                src="/images/final-collage-1.png"
+                alt="Joyous groom with Dhol player"
+              />
+            </div>
+            <div className="col-span-1 flex flex-col gap-4 lg:gap-6 w-full h-full">
+              <div className="relative flex-1 rounded-2xl overflow-hidden">
+                <img
+                  className="absolute inset-0 w-full h-full object-cover object-center"
+                  src="/images/final-collage-2.png"
+                  alt="Close up of traditional Dhol"
+                />
+              </div>
+              <div className="relative flex-1 rounded-2xl overflow-hidden">
+                <img
+                  className="absolute inset-0 w-full h-full object-cover object-center"
+                  src="/images/final-collage-3.png"
+                  alt="Bhangra dancers performing"
+                />
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
       </main>
