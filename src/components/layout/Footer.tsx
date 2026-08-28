@@ -2,50 +2,9 @@
 
 import BrandLogo from "../ui/BrandLogo";
 import Link from "next/link";
-interface FooterProps {
-  variant: "home" | "simple";
-}
+import InstagramIcon from "../ui/InstagramIcon";
 
-export default function Footer({ variant }: FooterProps) {
-  if (variant === "simple") {
-    // Return the simple variant based on services.html
-    return (
-      <footer className="w-full px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col md:grid md:grid-cols-4 gap-gutter bg-background border-t border-secondary/10 pb-24 md:pb-section-gap relative overflow-hidden">
-        <div className="absolute inset-0 texture-pattern opacity-10 pointer-events-none"></div>
-        <div className="md:col-span-1 flex flex-col gap-4 relative z-10">
-          <div className="font-display-lg text-headline-xl text-primary mb-unit">VIPIN PUNJABI DHOL</div>
-          <p className="font-body-md text-body-md text-on-surface-variant max-w-xs">
-            Elevating cultural entertainment through luxury execution in Mumbai and beyond.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 relative z-10">
-          <p className="font-label-caps text-label-caps text-primary mb-2">Location</p>
-          <p className="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
-            Kharghar, Navi Mumbai
-          </p>
-          <p className="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
-            Mumbai • Navi Mumbai • Kharghar
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 relative z-10">
-          <p className="font-label-caps text-label-caps text-primary mb-2">Contact</p>
-          <p className="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
-            7206110529
-          </p>
-          <p className="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
-            @vipinpuhal
-          </p>
-        </div>
-        <div className="md:col-span-4 mt-12 pt-8 border-t border-secondary/10 text-center relative z-10">
-          <p className="font-label-caps text-[10px] tracking-widest text-on-surface-variant">
-            © 2024 VIPIN PUNJABI DHOL & EVENTS. ALL RIGHTS RESERVED.
-          </p>
-        </div>
-      </footer>
-    );
-  }
-
-  // Home Footer Variant
+export default function Footer() {
   return (
     <footer className="w-full bg-background border-t border-secondary/10 pt-16 md:pt-24 pb-8 px-margin-mobile md:px-margin-desktop relative z-10">
       <div className="max-w-[1440px] mx-auto flex flex-col gap-12 md:gap-16">
@@ -75,7 +34,10 @@ export default function Footer({ variant }: FooterProps) {
           {/* Right: Contact Info */}
           <div className="flex flex-col gap-3 md:items-end text-left md:text-right">
             <a href="tel:7206110529" className="font-label-caps text-[11px] tracking-[0.15em] text-on-surface hover:text-primary transition-colors">7206110529</a>
-            <a href="https://instagram.com/vipinpuhal" target="_blank" rel="noopener noreferrer" className="font-label-caps text-[11px] tracking-[0.15em] text-on-surface hover:text-primary transition-colors">@VIPINPUHAL</a>
+            <a href="https://www.instagram.com/vipin_dhol_events_?igsi=aTJrdWIxYnBxcW05" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-label-caps text-[11px] tracking-[0.15em] text-on-surface hover:text-primary transition-colors">
+              <InstagramIcon className="w-4 h-4" />
+              @VIPIN_DHOL_EVENTS_
+            </a>
             <p className="font-label-caps text-[11px] tracking-[0.15em] text-on-surface-variant">KHARGHAR, NAVI MUMBAI</p>
           </div>
         </div>
@@ -89,9 +51,14 @@ export default function Footer({ variant }: FooterProps) {
 
         {/* Bottom Bar */}
         <div className="pt-6 border-t border-on-surface/10 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-          <p className="font-label-caps text-[9px] md:text-[10px] tracking-[0.2em] text-on-surface-variant uppercase">
-            © 2026 VIPIN PUNJABI DHOL & EVENTS
-          </p>
+          <div className="flex flex-col gap-2">
+            <p className="font-label-caps text-[9px] md:text-[10px] tracking-[0.2em] text-on-surface-variant uppercase">
+              © 2026 VIPIN PUNJABI DHOL & EVENTS
+            </p>
+            <p className="font-label-caps text-[8px] tracking-[0.1em] text-on-surface/40 hover:text-on-surface-variant transition-colors">
+              <a href="https://www.flaticon.com/free-icons/instagram" title="instagram icons" target="_blank" rel="noopener noreferrer">Instagram icons created by Magnific - Flaticon</a>
+            </p>
+          </div>
           <p className="font-label-caps text-[9px] md:text-[10px] tracking-[0.2em] text-on-surface-variant uppercase">
             MUMBAI • NAVI MUMBAI • KHARGHAR
           </p>

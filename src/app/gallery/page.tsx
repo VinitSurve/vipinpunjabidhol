@@ -157,7 +157,7 @@ export default function GalleryPage() {
         </div>
       </section>
       </main>
-      <Footer variant="simple" />
+      <Footer />
     </>
   );
 }

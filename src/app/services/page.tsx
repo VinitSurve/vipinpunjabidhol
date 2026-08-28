@@ -256,7 +256,7 @@ export default function ServicesPage() {
         </div>
       </section>
     </main>
-    <Footer variant="simple" />
+    <Footer />
     </>
   );
 }

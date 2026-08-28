@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import BrandLogo from "../ui/BrandLogo";
+import WhatsAppIcon from "../ui/WhatsAppIcon";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -46,41 +47,19 @@ export default function Navbar() {
           })}
         </nav>
         <div className="flex items-center gap-4">
-          {pathname === "/" ? (
-            <>
-              <Link
-                className="font-cta text-cta bg-on-background text-background px-6 py-3 border-b-2 border-primary transition-opacity hover:opacity-90 uppercase tracking-widest"
-                href="/contact"
-              >
-                Book Now
-              </Link>
-              <a
-                className="font-cta text-cta bg-surface-container text-on-background border border-on-background px-6 py-3 transition-colors hover:bg-surface-variant uppercase tracking-widest hidden xl:block"
-                href="https://wa.me/917206110529"
-              >
-                WhatsApp
-              </a>
-            </>
-          ) : (
-            <>
-              <a
-                className="font-cta text-cta text-primary hover:text-primary/80 transition-colors flex items-center gap-2 group hidden xl:flex uppercase"
-                href="https://wa.me/917206110529"
-              >
-                <span className="material-symbols-outlined group-hover:scale-110 transition-transform">
-                  chat
-                </span>
-                WhatsApp
-              </a>
-              <Link
-                className="font-cta text-cta bg-primary-container text-on-primary-container px-6 py-3 border border-primary-container hover:bg-transparent hover:text-primary-container transition-all duration-300 relative overflow-hidden group uppercase tracking-[0.1em]"
-                href="/contact"
-              >
-                <span className="relative z-10">Book Now</span>
-                <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md"></div>
-              </Link>
-            </>
-          )}
+          <Link
+            className="font-cta text-cta bg-on-background text-background px-6 py-3 border-b-2 border-primary transition-opacity hover:opacity-90 uppercase tracking-widest"
+            href="/contact"
+          >
+            Book Now
+          </Link>
+          <a
+            className="font-cta text-cta flex items-center gap-2 bg-surface-container text-on-background border border-on-background px-6 py-3 transition-colors hover:bg-surface-variant uppercase tracking-widest hidden xl:flex"
+            href="https://wa.me/917206110529"
+          >
+            <WhatsAppIcon className="w-5 h-5" />
+            WhatsApp
+          </a>
         </div>
       </header>
       
@@ -135,7 +114,7 @@ export default function Navbar() {
             
             <div className="w-full border-t border-[#B58A3A]/20 mt-4 pt-8 flex flex-col gap-6">
               <a href="https://wa.me/917206110529" className="font-label-caps text-sm uppercase tracking-widest text-[#FFFDF8] hover:text-[#B58A3A] flex items-center gap-3 transition-colors">
-                <span className="material-symbols-outlined text-[#B58A3A]">chat</span>
+                <WhatsAppIcon className="w-6 h-6" />
                 WhatsApp Us
               </a>
               <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="bg-[#B58A3A] text-[#171513] hover:bg-[#FFFDF8] font-label-caps text-sm uppercase tracking-widest text-center py-4 w-full transition-colors">

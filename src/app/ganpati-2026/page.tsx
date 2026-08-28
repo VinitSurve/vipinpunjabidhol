@@ -250,7 +250,7 @@ export default function GanpatiPage() {
         </section>
         
       </main>
-      <Footer variant="simple" />
+      <Footer />
     </>
   );
 }

@@ -1,6 +1,8 @@
 "use client";
 
 import Footer from "@/components/layout/Footer";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
+import InstagramIcon from "@/components/ui/InstagramIcon";
 
 export default function ContactPage() {
   return (
@@ -52,10 +54,10 @@ export default function ContactPage() {
                 Instant replies for bookings.
               </p>
               <a
-                className="inline-block mt-4 font-cta text-cta bg-transparent text-primary border border-primary px-6 py-3 hover:bg-primary/10 transition-all duration-300 w-full text-center flex items-center justify-center gap-2"
+                className="mt-4 font-cta text-cta bg-transparent text-primary border border-primary px-6 py-3 hover:bg-primary/10 transition-all duration-300 w-full flex flex-nowrap items-center justify-center gap-2 whitespace-nowrap"
                 href="https://wa.me/917206110529"
               >
-                <span className="material-symbols-outlined">chat</span> WHATSAPP US
+                <WhatsAppIcon className="w-6 h-6" /> WHATSAPP US
               </a>
             </div>
 
@@ -76,62 +78,55 @@ export default function ContactPage() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <span className="material-symbols-outlined text-primary">
-                  alternate_email
-                </span>
-                <p className="font-body-md text-body-md text-on-surface">
-                  @vipinpuhal
+              <a href="https://www.instagram.com/vipin_dhol_events_?igsi=aTJrdWIxYnBxcW05" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
+                <InstagramIcon className="w-6 h-6" />
+                <p className="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">
+                  @vipin_dhol_events_
                 </p>
-              </div>
+              </a>
             </div>
           </div>
 
-          <div className="lg:col-span-8 bg-surface-container-low p-margin-mobile md:p-12 border border-primary/20 shadow-2xl relative overflow-hidden">
+          <div className="lg:col-span-8 bg-surface border border-secondary/15 shadow-[0_30px_80px_-15px_rgba(0,0,0,0.08)] ring-1 ring-inset ring-white/50 p-8 md:p-12 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[100px] rounded-full pointer-events-none"></div>
             <h2 className="font-headline-xl text-headline-xl text-on-surface mb-8">
               Booking Request
             </h2>
-            <form className="space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-                <div className="relative">
+            <form className="flex flex-col gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+                <div className="flex flex-col gap-2">
+                  <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant" htmlFor="name">
+                    Full Name
+                  </label>
                   <input
-                    className="block w-full bg-transparent border-0 border-b border-outline text-on-surface focus:ring-0 focus:border-primary peer pt-4 pb-2 font-body-md placeholder-transparent transition-colors"
                     id="name"
-                    placeholder="Name"
                     type="text"
                     required
+                    className="w-full bg-transparent border-0 border-b border-secondary/20 py-2 px-0 text-on-surface font-body-md focus:outline-none focus:ring-0 focus:border-primary transition-colors"
                   />
-                  <label
-                    className="absolute left-0 top-0 text-sm font-label-caps text-on-surface-variant peer-focus:text-primary peer-focus:-top-4 peer-focus:text-xs peer-valid:-top-4 peer-valid:text-xs transition-all pointer-events-none tracking-widest"
-                    htmlFor="name"
-                  >
-                    FULL NAME
-                  </label>
                 </div>
-                <div className="relative">
+                <div className="flex flex-col gap-2">
+                  <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant" htmlFor="phone">
+                    Phone Number
+                  </label>
                   <input
-                    className="block w-full bg-transparent border-0 border-b border-outline text-on-surface focus:ring-0 focus:border-primary peer pt-4 pb-2 font-body-md placeholder-transparent transition-colors"
                     id="phone"
-                    placeholder="Phone"
                     type="tel"
                     required
+                    className="w-full bg-transparent border-0 border-b border-secondary/20 py-2 px-0 text-on-surface font-body-md focus:outline-none focus:ring-0 focus:border-primary transition-colors"
                   />
-                  <label
-                    className="absolute left-0 top-0 text-sm font-label-caps text-on-surface-variant peer-focus:text-primary peer-focus:-top-4 peer-focus:text-xs peer-valid:-top-4 peer-valid:text-xs transition-all pointer-events-none tracking-widest"
-                    htmlFor="phone"
-                  >
-                    PHONE NUMBER
-                  </label>
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-                <div className="relative">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+                <div className="flex flex-col gap-2 relative">
+                  <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant" htmlFor="event_type">
+                    Event Type
+                  </label>
                   <select
-                    className="block w-full bg-transparent border-0 border-b border-outline text-on-surface focus:ring-0 focus:border-primary peer pt-4 pb-2 font-body-md transition-colors appearance-none cursor-pointer"
                     id="event_type"
                     defaultValue=""
+                    className="w-full bg-transparent border-0 border-b border-secondary/20 py-2 px-0 text-on-surface font-body-md focus:outline-none focus:ring-0 focus:border-primary transition-colors appearance-none cursor-pointer"
                   >
                     <option className="bg-surface text-on-surface-variant" disabled value="">
                       Select Event Type
@@ -149,98 +144,79 @@ export default function ContactPage() {
                       Other
                     </option>
                   </select>
-                  <label
-                    className="absolute left-0 -top-4 text-xs font-label-caps text-on-surface-variant tracking-widest pointer-events-none"
-                    htmlFor="event_type"
-                  >
-                    EVENT TYPE
-                  </label>
-                  <span className="material-symbols-outlined absolute right-0 top-4 text-on-surface-variant pointer-events-none">
+                  <span className="material-symbols-outlined absolute right-0 bottom-2 text-on-surface-variant pointer-events-none">
                     arrow_drop_down
                   </span>
                 </div>
-                <div className="relative">
+                <div className="flex flex-col gap-2">
+                  <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant" htmlFor="date">
+                    Event Date
+                  </label>
                   <input
-                    className="block w-full bg-transparent border-0 border-b border-outline text-on-surface focus:ring-0 focus:border-primary peer pt-4 pb-2 font-body-md transition-colors [color-scheme:dark]"
                     id="date"
                     type="date"
                     required
+                    className="w-full bg-transparent border-0 border-b border-secondary/20 py-2 px-0 text-on-surface font-body-md focus:outline-none focus:ring-0 focus:border-primary transition-colors cursor-pointer [color-scheme:dark]"
                   />
-                  <label
-                    className="absolute left-0 -top-4 text-xs font-label-caps text-on-surface-variant tracking-widest pointer-events-none"
-                    htmlFor="date"
-                  >
-                    EVENT DATE
-                  </label>
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-                <div className="relative">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+                <div className="flex flex-col gap-2">
+                  <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant" htmlFor="location">
+                    Event Location / Venue
+                  </label>
                   <input
-                    className="block w-full bg-transparent border-0 border-b border-outline text-on-surface focus:ring-0 focus:border-primary peer pt-4 pb-2 font-body-md placeholder-transparent transition-colors"
                     id="location"
-                    placeholder="Location"
                     type="text"
                     required
+                    placeholder="City or Venue"
+                    className="w-full bg-transparent border-0 border-b border-secondary/20 py-2 px-0 text-on-surface font-body-md focus:outline-none focus:ring-0 focus:border-primary transition-colors placeholder:text-on-surface-variant/30"
                   />
-                  <label
-                    className="absolute left-0 top-0 text-sm font-label-caps text-on-surface-variant peer-focus:text-primary peer-focus:-top-4 peer-focus:text-xs peer-valid:-top-4 peer-valid:text-xs transition-all pointer-events-none tracking-widest"
-                    htmlFor="location"
-                  >
-                    EVENT LOCATION / VENUE
-                  </label>
                 </div>
-                <div className="relative">
+                <div className="flex flex-col gap-2">
+                  <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant" htmlFor="guests">
+                    Estimated Guests
+                  </label>
                   <input
-                    className="block w-full bg-transparent border-0 border-b border-outline text-on-surface focus:ring-0 focus:border-primary peer pt-4 pb-2 font-body-md placeholder-transparent transition-colors"
                     id="guests"
-                    placeholder="Guests"
                     type="number"
                     required
+                    placeholder="Number of guests"
+                    className="w-full bg-transparent border-0 border-b border-secondary/20 py-2 px-0 text-on-surface font-body-md focus:outline-none focus:ring-0 focus:border-primary transition-colors placeholder:text-on-surface-variant/30"
                   />
-                  <label
-                    className="absolute left-0 top-0 text-sm font-label-caps text-on-surface-variant peer-focus:text-primary peer-focus:-top-4 peer-focus:text-xs peer-valid:-top-4 peer-valid:text-xs transition-all pointer-events-none tracking-widest"
-                    htmlFor="guests"
-                  >
-                    ESTIMATED GUESTS
-                  </label>
                 </div>
               </div>
 
-              <div className="relative">
-                <textarea
-                  className="block w-full bg-transparent border-0 border-b border-outline text-on-surface focus:ring-0 focus:border-primary peer pt-4 pb-2 font-body-md placeholder-transparent transition-colors resize-none"
-                  id="requirements"
-                  placeholder="Requirements"
-                  rows={3}
-                  required
-                ></textarea>
-                <label
-                  className="absolute left-0 top-0 text-sm font-label-caps text-on-surface-variant peer-focus:text-primary peer-focus:-top-4 peer-focus:text-xs peer-valid:-top-4 peer-valid:text-xs transition-all pointer-events-none tracking-widest"
-                  htmlFor="requirements"
-                >
-                  SPECIAL REQUIREMENTS & DETAILS
+              <div className="flex flex-col gap-2">
+                <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant" htmlFor="requirements">
+                  Special Requirements & Details
                 </label>
+                <textarea
+                  id="requirements"
+                  required
+                  rows={3}
+                  placeholder="Tell us about your event..."
+                  className="w-full bg-transparent border-0 border-b border-secondary/20 py-2 px-0 text-on-surface font-body-md focus:outline-none focus:ring-0 focus:border-primary transition-colors resize-none placeholder:text-on-surface-variant/30"
+                ></textarea>
               </div>
 
-              <div className="pt-4 text-right">
+              <div className="pt-4 flex justify-end">
                 <button
-                  className="font-cta text-cta bg-primary-container text-on-primary-container px-12 py-4 border border-primary-container hover:bg-transparent hover:text-primary-container transition-all duration-300 relative overflow-hidden group inline-flex items-center gap-3"
+                  className="font-cta text-cta bg-[#171513] text-[#FFFDF8] hover:bg-[#B58A3A] transition-colors px-12 py-4 relative group inline-flex items-center gap-3 uppercase tracking-widest"
                   type="submit"
                 >
                   <span className="relative z-10">SUBMIT REQUEST</span>
-                  <span className="material-symbols-outlined relative z-10 text-xl">
+                  <span className="material-symbols-outlined relative z-10 group-hover:translate-x-1 transition-transform">
                     arrow_forward
                   </span>
-                  <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md"></div>
                 </button>
               </div>
             </form>
           </div>
         </div>
       </main>
-      <Footer variant="simple" />
+      <Footer />
     </>
   );
 }

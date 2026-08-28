@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import WhatsAppIcon from "../ui/WhatsAppIcon";
 
 export default function MobileNav() {
   return (
@@ -18,7 +19,7 @@ export default function MobileNav() {
         className="flex flex-col items-center justify-center text-on-surface-variant active:bg-secondary-container w-full h-full transition-colors rounded-lg p-2 active:scale-110 transform duration-200 border-x border-surface/20"
         href="https://wa.me/917206110529"
       >
-        <span className="material-symbols-outlined mb-1">chat</span>
+        <WhatsAppIcon className="w-6 h-6 mb-1" />
         <span className="font-label-caps text-label-caps" style={{ fontSize: "10px" }}>
           WhatsApp
         </span>

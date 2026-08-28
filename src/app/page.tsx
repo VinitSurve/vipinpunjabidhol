@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Footer from "@/components/layout/Footer";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 export default function Home() {
   return (
@@ -22,9 +23,10 @@ export default function Home() {
               BOOK YOUR EVENT
             </Link>
             <a
-              className="font-cta text-cta bg-surface-container text-primary border border-primary px-8 py-4 hover:bg-surface-variant transition-colors w-full sm:w-auto text-center tracking-widest uppercase"
+              className="font-cta text-cta flex items-center justify-center gap-2 bg-surface-container text-primary border border-primary px-8 py-4 hover:bg-surface-variant transition-colors w-full sm:w-auto text-center tracking-widest uppercase"
               href="https://wa.me/917206110529"
             >
+              <WhatsAppIcon className="w-6 h-6" />
               WHATSAPP US
             </a>
           </div>
@@ -241,7 +243,7 @@ export default function Home() {
         </div>
       </section>
       </main>
-      <Footer variant="home" />
+      <Footer />
     </>
   );
 }
