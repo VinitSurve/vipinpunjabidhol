@@ -101,10 +101,10 @@ export default function Home() {
               <div className="absolute inset-0 card-scrim"></div>
               <div className="absolute inset-0 border border-primary/0 group-hover:border-primary/50 transition-colors duration-300 z-10 m-2"></div>
               <div className="absolute bottom-0 left-0 w-full p-6 z-20 flex flex-col justify-end">
-                <h3 className="font-headline-lg text-[24px] text-on-surface mb-2 font-display-lg tracking-wide group-hover:text-primary transition-colors">
+                <h3 className="font-headline-lg text-[24px] text-[#FFFDF8] mb-2 font-display-lg tracking-wide group-hover:text-primary transition-colors">
                   Punjabi Dhol
                 </h3>
-                <p className="font-body-md text-body-md text-on-surface-variant/80 mb-4 line-clamp-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                <p className="font-body-md text-body-md text-[#EFE9DD] mb-4 line-clamp-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
                   The heartbeat of traditional celebrations.
                 </p>
                 <div className="font-cta text-cta text-primary flex items-center uppercase tracking-widest text-[10px]">
@@ -123,10 +123,10 @@ export default function Home() {
               <div className="absolute inset-0 card-scrim"></div>
               <div className="absolute inset-0 border border-primary/0 group-hover:border-primary/50 transition-colors duration-300 z-10 m-2"></div>
               <div className="absolute bottom-0 left-0 w-full p-6 z-20 flex flex-col justify-end">
-                <h3 className="font-headline-lg text-[24px] text-on-surface mb-2 font-display-lg tracking-wide group-hover:text-primary transition-colors">
+                <h3 className="font-headline-lg text-[24px] text-[#FFFDF8] mb-2 font-display-lg tracking-wide group-hover:text-primary transition-colors">
                   Bhangra Group
                 </h3>
-                <p className="font-body-md text-body-md text-on-surface-variant/80 mb-4 line-clamp-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                <p className="font-body-md text-body-md text-[#EFE9DD] mb-4 line-clamp-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
                   High-octane choreographed performances.
                 </p>
                 <div className="font-cta text-cta text-primary flex items-center uppercase tracking-widest text-[10px]">
@@ -149,10 +149,10 @@ export default function Home() {
               <div className="absolute inset-0 card-scrim"></div>
               <div className="absolute inset-0 border border-primary/0 group-hover:border-primary/50 transition-colors duration-300 z-10 m-2"></div>
               <div className="absolute bottom-0 left-0 w-full p-6 z-20 flex flex-col justify-end">
-                <h3 className="font-headline-lg text-[24px] text-on-surface mb-2 font-display-lg tracking-wide group-hover:text-primary transition-colors">
+                <h3 className="font-headline-lg text-[24px] text-[#FFFDF8] mb-2 font-display-lg tracking-wide group-hover:text-primary transition-colors">
                   Dhol & Singer
                 </h3>
-                <p className="font-body-md text-body-md text-on-surface-variant/80 mb-4 line-clamp-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                <p className="font-body-md text-body-md text-[#EFE9DD] mb-4 line-clamp-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
                   Live vocalists paired with percussion.
                 </p>
                 <div className="font-cta text-cta text-primary flex items-center uppercase tracking-widest text-[10px]">
@@ -171,10 +171,10 @@ export default function Home() {
               <div className="absolute inset-0 card-scrim"></div>
               <div className="absolute inset-0 border border-primary/0 group-hover:border-primary/50 transition-colors duration-300 z-10 m-2"></div>
               <div className="absolute bottom-0 left-0 w-full p-6 z-20 flex flex-col justify-end">
-                <h3 className="font-headline-lg text-[24px] text-on-surface mb-2 font-display-lg tracking-wide group-hover:text-primary transition-colors">
+                <h3 className="font-headline-lg text-[24px] text-[#FFFDF8] mb-2 font-display-lg tracking-wide group-hover:text-primary transition-colors">
                   Punjabi LED Dhol
                 </h3>
-                <p className="font-body-md text-body-md text-on-surface-variant/80 mb-4 line-clamp-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                <p className="font-body-md text-body-md text-[#EFE9DD] mb-4 line-clamp-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
                   Modern visual spectacle for night events.
                 </p>
                 <div className="font-cta text-cta text-primary flex items-center uppercase tracking-widest text-[10px]">
