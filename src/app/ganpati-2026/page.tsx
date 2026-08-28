@@ -12,11 +12,11 @@ export default function GanpatiPage() {
       <main className="min-h-screen pt-24 bg-background">
         
         {/* 1. Ganpati Hero */}
-        <section className="py-12 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
+        <section className="pt-4 pb-12 md:pt-8 md:pb-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
           
           {/* Hero Left Content */}
           <div className="flex flex-col items-start gap-6 order-2 md:order-1">
-            <div className="bg-surface-container-low px-4 py-2 font-label-caps text-[10px] text-on-surface-variant uppercase tracking-[0.2em]">
+            <div className="bg-surface-container-low px-4 py-2 font-label-caps text-[12px] text-on-surface-variant uppercase tracking-[0.2em]">
               ADVANCE BOOKING OPEN
             </div>
             
@@ -132,7 +132,7 @@ export default function GanpatiPage() {
             
             {/* Left Column: Editorial Heading */}
             <div className="flex flex-col items-start pt-8 lg:pt-16">
-              <span className="font-label-caps text-[10px] tracking-[0.2em] text-primary uppercase mb-6 block">
+              <span className="font-label-caps text-[12px] tracking-[0.2em] text-primary uppercase mb-6 block">
                 PLAN YOUR CELEBRATION
               </span>
               <h2 className="font-headline-xl text-[48px] md:text-[64px] text-on-surface leading-[1.05] mb-6">
@@ -172,15 +172,27 @@ export default function GanpatiPage() {
                     </div>
                   </div>
 
-                  {/* Event Date (Now under Your Details) */}
-                  <div className="flex flex-col gap-2 mt-2">
-                    <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant">
-                      Event Date
-                    </label>
-                    <input 
-                      type="date"
-                      className="w-full bg-transparent border-0 border-b border-secondary/20 py-2 px-0 text-on-surface font-body-md focus:outline-none focus:ring-0 focus:border-primary transition-colors cursor-pointer"
-                    />
+                  {/* Event Date & Location */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mt-2">
+                    <div className="flex flex-col gap-2">
+                      <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant">
+                        Event Date
+                      </label>
+                      <input 
+                        type="date"
+                        className="w-full bg-transparent border-0 border-b border-secondary/20 py-2 px-0 text-on-surface font-body-md focus:outline-none focus:ring-0 focus:border-primary transition-colors cursor-pointer"
+                      />
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <label className="font-label-caps text-[10px] tracking-[0.15em] uppercase text-on-surface-variant">
+                        Event Location
+                      </label>
+                      <input 
+                        type="text"
+                        placeholder="City or Venue"
+                        className="w-full bg-transparent border-0 border-b border-secondary/20 py-2 px-0 text-on-surface font-body-md focus:outline-none focus:ring-0 focus:border-primary transition-colors placeholder:text-on-surface-variant/30"
+                      />
+                    </div>
                   </div>
                 </div>
 
