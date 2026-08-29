@@ -144,7 +144,7 @@ export default function ServicesPage() {
           </div>
 
           {/* SERVICE 02 */}
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-20 items-center">
+          <div id="led-dhol" className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-20 items-center">
             <div className="flex flex-col items-start justify-center pl-4 xl:pl-12 order-2 lg:order-1">
               <p className="font-label-caps text-[11px] text-primary tracking-[0.2em] uppercase mb-4 flex items-center gap-3">
                 <span className="text-on-surface-variant">02</span> MODERN SPECTACLE
@@ -179,7 +179,7 @@ export default function ServicesPage() {
           </div>
 
           {/* SERVICE 03 */}
-          <div id="performance" className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-center">
+          <div id="bhangra-group" className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-center">
             <div className="relative w-full aspect-[4/3] overflow-hidden bg-secondary/10">
               <Image 
                 src="/images/bhangra-group-service.png" 
@@ -220,7 +220,7 @@ export default function ServicesPage() {
           </div>
 
           {/* SERVICE 04 */}
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-20 items-center">
+          <div id="dhol-singer" className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-20 items-center">
             <div className="flex flex-col items-start justify-center pl-4 xl:pl-12 order-2 lg:order-1">
               <p className="font-label-caps text-[11px] text-primary tracking-[0.2em] uppercase mb-4 flex items-center gap-3">
                 <span className="text-on-surface-variant">04</span> LIVE PERFORMANCE

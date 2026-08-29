@@ -92,7 +92,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Service Card 1 */}
-            <Link className="group relative aspect-[3/4] overflow-hidden champagne-border-1px block" href="/contact">
+            <Link className="group relative aspect-[3/4] overflow-hidden champagne-border-1px block" href="/services#dhol-live-music">
               <img
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 data-alt="Close up editorial portrait of a traditional Punjabi Dhol player. High contrast, dark cinematic lighting focusing on the intricate carvings of the wooden dhol drum and the performer's intense expression. Metallic gold accents on the attire shine against the obsidian background. Luxury minimalist style."
@@ -114,7 +114,7 @@ export default function Home() {
               </div>
             </Link>
             {/* Service Card 2 */}
-            <Link className="group relative aspect-[3/4] overflow-hidden champagne-border-1px block" href="/contact">
+            <Link className="group relative aspect-[3/4] overflow-hidden champagne-border-1px block" href="/services#bhangra-group">
               <img
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 data-alt="Dynamic shot of a Punjabi Bhangra dance group performing at a high-end luxury event. Men in vibrant, embroidered traditional attire caught mid-air in a coordinated jump. The background is dark and moody, punctuated by sharp, bright spotlights. Premium, energetic, cinematic look."
@@ -136,7 +136,7 @@ export default function Home() {
               </div>
             </Link>
             {/* Service Card 3 */}
-            <Link className="group relative aspect-[3/4] overflow-hidden gold-border-1px block" href="/contact">
+            <Link className="group relative aspect-[3/4] overflow-hidden gold-border-1px block" href="/services#dhol-singer">
               {/* Premium Indicator */}
               <div className="absolute top-4 right-4 z-30 bg-primary text-background font-label-caps text-[10px] px-2 py-1 uppercase tracking-widest">
                 Premium
@@ -162,7 +162,7 @@ export default function Home() {
               </div>
             </Link>
             {/* Service Card 4 */}
-            <Link className="group relative aspect-[3/4] overflow-hidden champagne-border-1px block" href="/contact">
+            <Link className="group relative aspect-[3/4] overflow-hidden champagne-border-1px block" href="/services#led-dhol">
               <img
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 data-alt="Modern event scene with performers playing LED illuminated dhol drums. The drums glow vibrantly against a pitch-black background, creating striking geometric light trails. A fusion of modern technology and traditional culture. High-end, futuristic nightclub aesthetic."
