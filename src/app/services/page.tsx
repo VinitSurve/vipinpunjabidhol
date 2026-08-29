@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Footer from "@/components/layout/Footer";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Services - VIPIN PUNJABI DHOL & EVENTS",
@@ -9,254 +10,383 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <main className="flex-grow pt-24">
-      {/* Hero Section */}
-      <section className="relative w-full h-[60vh] flex items-center justify-center px-margin-mobile md:px-margin-desktop border-b border-secondary/20 overflow-hidden group">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-40 transition-transform duration-1000 group-hover:scale-105"
-          data-alt="Cinematic wide shot of a lavish Indian wedding setup at night, illuminated by golden string lights and warm spotlights. High-contrast lighting highlights the metallic gold accents of the decor against the dark, obsidian night sky. The mood is opulent, festive, and highly premium, capturing the essence of luxury event entertainment in Mumbai."
-          style={{
-            backgroundImage:
-              "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDhXJQFi8zUwdVETQANLLxbvEB1J02vo3oddKlMg875ZwezjbdEdIgVuBbc9bb-0qEqAcN87shQgRtDvcHPAD26IcWe38U2fqmJ20EeslRfdL5dQjNWC28cqLyEeZ_H01Zm3xVEATBCVlsnFIMmrFOA5nd-ctMOXclIb2_tG78uXhTIpBHq-C_OgvstEg2UDAhrL7fMHOZ_NTsSEQ1QEGPgUoOhZ1hcSsgWDSFdPmKselY1UQkYhcSe')",
-          }}
-        ></div>
+      <main className="flex-grow pt-24 bg-background">
+        
+        {/* 1. HERO SECTION */}
+        <section className="relative w-full h-[70vh] min-h-[600px] flex items-center justify-center px-6 border-b border-secondary/20 overflow-hidden">
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: "url('/images/home-hero-dhol.png')",
+            }}
+          ></div>
+          {/* Cinematic overlay */}
+          <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative z-10 text-center max-w-4xl mx-auto flex flex-col items-center gap-6">
-          <p className="font-label-caps text-label-caps text-primary tracking-widest uppercase">
-            The Pinnacle of Cultural Performance
+          <div className="relative z-10 text-center max-w-5xl mx-auto flex flex-col items-center gap-6 mt-16">
+            <p className="font-label-caps text-[11px] md:text-[13px] text-primary tracking-[0.3em] uppercase">
+              The Pinnacle of Cultural Performance
+            </p>
+            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white leading-[1.1] tracking-tight">
+              PREMIUM<br/>ENTERTAINMENT<br/>SERVICES
+            </h1>
+            <div className="w-16 h-[1px] bg-primary my-4"></div>
+            <p className="text-[16px] md:text-[18px] text-white/90 max-w-2xl mx-auto font-light leading-relaxed">
+              Authentic Punjabi performances crafted<br className="hidden md:block" />
+              for unforgettable celebrations.
+            </p>
+          </div>
+        </section>
+
+        {/* 2. SERVICES INTRO */}
+        <section className="py-24 md:py-32 px-6 text-center max-w-4xl mx-auto">
+          <p className="font-label-caps text-[11px] text-primary tracking-[0.2em] uppercase mb-6">
+            OUR SERVICES
           </p>
-          <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">
-            PREMIUM ENTERTAINMENT SERVICES
-          </h1>
-          <div className="w-24 h-1 bg-primary-container mt-4"></div>
-        </div>
-      </section>
+          <h2 className="font-serif text-4xl md:text-5xl text-on-background mb-8 leading-tight">
+            CRAFTED FOR THE MOMENT
+          </h2>
+          <p className="text-[16px] md:text-[18px] text-on-surface-variant max-w-2xl mx-auto font-light leading-relaxed">
+            From the first beat to the final celebration, our performances bring together authentic Punjabi tradition, contemporary production and unforgettable energy.
+          </p>
+        </section>
 
-      {/* Grouped Catalog Menu */}
-      <section className="px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto texture-pattern">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-          {/* Category 1 */}
-          <div className="border border-secondary/20 p-8 bg-surface-container-low hover:border-primary-container transition-colors duration-500 group">
-            <h3 className="font-headline-lg text-headline-lg text-primary mb-6 flex items-center gap-3">
-              <span className="material-symbols-outlined">music_note</span>
-              DHOL & LIVE MUSIC
-            </h3>
-            <ul className="space-y-4 font-body-lg text-body-lg text-on-surface-variant">
-              <li className="flex items-center gap-2 group-hover:text-on-surface transition-colors">
-                <div className="w-1.5 h-1.5 bg-primary-container rounded-full"></div> Punjabi Dhol Players
-              </li>
-              <li className="flex items-center gap-2 group-hover:text-on-surface transition-colors">
-                <div className="w-1.5 h-1.5 bg-primary-container rounded-full"></div> Dhol & Singer
-              </li>
-              <li className="flex items-center gap-2 group-hover:text-on-surface transition-colors">
-                <div className="w-1.5 h-1.5 bg-primary-container rounded-full"></div> LED Dhol
-              </li>
-              <li className="flex items-center gap-2 group-hover:text-on-surface transition-colors">
-                <div className="w-1.5 h-1.5 bg-primary-container rounded-full"></div> DJ Mix Dhol
-              </li>
-            </ul>
-          </div>
-          {/* Category 2 */}
-          <div className="border border-secondary/20 p-8 bg-surface-container-low hover:border-primary-container transition-colors duration-500 group">
-            <h3 className="font-headline-lg text-headline-lg text-primary mb-6 flex items-center gap-3">
-              <span className="material-symbols-outlined">celebration</span>
-              PERFORMANCE
-            </h3>
-            <ul className="space-y-4 font-body-lg text-body-lg text-on-surface-variant">
-              <li className="flex items-center gap-2 group-hover:text-on-surface transition-colors">
-                <div className="w-1.5 h-1.5 bg-primary-container rounded-full"></div> Punjabi Bhangra Group
-              </li>
-              <li className="flex items-center gap-2 group-hover:text-on-surface transition-colors">
-                <div className="w-1.5 h-1.5 bg-primary-container rounded-full"></div> Punjabi Boliya / Tappa
-              </li>
-            </ul>
-          </div>
-          {/* Category 3 */}
-          <div className="border border-secondary/20 p-8 bg-surface-container-low hover:border-primary-container transition-colors duration-500 group">
-            <h3 className="font-headline-lg text-headline-lg text-primary mb-6 flex items-center gap-3">
-              <span className="material-symbols-outlined">nightlife</span>
-              EVENT ENTERTAINMENT
-            </h3>
-            <ul className="space-y-4 font-body-lg text-body-lg text-on-surface-variant">
-              <li className="flex items-center gap-2 group-hover:text-on-surface transition-colors">
-                <div className="w-1.5 h-1.5 bg-primary-container rounded-full"></div> DJ Setup
-              </li>
-              <li className="flex items-center gap-2 group-hover:text-on-surface transition-colors">
-                <div className="w-1.5 h-1.5 bg-primary-container rounded-full"></div> Jaggo on Rent
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
+        {/* 3. SERVICE CATEGORY CARDS */}
+        <section className="px-6 md:px-12 max-w-[1400px] mx-auto pb-32">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            
+            {/* Card 1 */}
+            <div className="bg-surface border border-primary/20 p-8 lg:p-10 flex flex-col items-start transition-all duration-500 hover:border-primary/50 group">
+              <span className="material-symbols-outlined text-primary text-3xl mb-6 font-light">music_note</span>
+              <h3 className="font-serif text-2xl text-on-background mb-6">
+                DHOL &<br/>LIVE MUSIC
+              </h3>
+              <ul className="space-y-3 font-light text-[15px] text-on-surface-variant flex-grow mb-10">
+                <li className="flex items-center gap-3"><div className="w-1 h-1 bg-primary rounded-full"></div> Punjabi Dhol Players</li>
+                <li className="flex items-center gap-3"><div className="w-1 h-1 bg-primary rounded-full"></div> Dhol & Singer</li>
+                <li className="flex items-center gap-3"><div className="w-1 h-1 bg-primary rounded-full"></div> LED Dhol</li>
+                <li className="flex items-center gap-3"><div className="w-1 h-1 bg-primary rounded-full"></div> DJ Mix Dhol</li>
+              </ul>
+              <Link href="#dhol-live-music" className="font-label-caps text-[11px] text-primary tracking-[0.2em] uppercase flex items-center gap-2 group-hover:gap-3 transition-all">
+                EXPLORE <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
+              </Link>
+            </div>
 
-      {/* Detailed Services (Bento Grid Style for Premium Feel) */}
-      <section className="px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto space-y-32">
-        {/* Service: Punjabi Dhol Players (Feature Left) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
-          <div className="lg:col-span-7 h-[600px] relative overflow-hidden group border border-secondary/20 p-2 bg-surface">
-            <div
-              className="w-full h-full bg-cover bg-center filter grayscale-[30%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
-              data-alt="Close up action shot of a professional Punjabi Dhol player in traditional vibrant attire, striking the drum with intensity. The lighting is cinematic, capturing the sweat and motion blur of the sticks, set against an obsidian black background with faint metallic gold light flares. High-end editorial photography style."
-              style={{
-                backgroundImage:
-                  "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCo0Ml8zIQASygXpSFKNA90W6nDMIxHWr7O1MOROiglAj198JRcqFbUVW9jGL7XjdTS3f2jDMIaKYiR1ZB7N6LbBsd6OwMnSn4BGl5LVpIf0I4nkzHqKClD3-LRdDAehfcnjZk3uddMbjmE67uLmh6w1OLJo-fjIUgSxQVzkZkHYHa__thewYFTRMqDQ2QA0temn-vYb2xibDiPZAOOCuWSAfT0hmsKBdNWYZ-d-LuEbDRMcuC7OuCs')",
-              }}
-            ></div>
+            {/* Card 2 */}
+            <div className="bg-surface border border-primary/20 p-8 lg:p-10 flex flex-col items-start transition-all duration-500 hover:border-primary/50 group">
+              <span className="material-symbols-outlined text-primary text-3xl mb-6 font-light">groups</span>
+              <h3 className="font-serif text-2xl text-on-background mb-6">
+                PERFORMANCE
+              </h3>
+              <ul className="space-y-3 font-light text-[15px] text-on-surface-variant flex-grow mb-10">
+                <li className="flex items-center gap-3"><div className="w-1 h-1 bg-primary rounded-full"></div> Punjabi Bhangra Group</li>
+                <li className="flex items-center gap-3"><div className="w-1 h-1 bg-primary rounded-full"></div> Punjabi Boliya / Tappa</li>
+              </ul>
+              <Link href="#performance" className="font-label-caps text-[11px] text-primary tracking-[0.2em] uppercase flex items-center gap-2 group-hover:gap-3 transition-all">
+                EXPLORE <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
+              </Link>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-surface border border-primary/20 p-8 lg:p-10 flex flex-col items-start transition-all duration-500 hover:border-primary/50 group">
+              <span className="material-symbols-outlined text-primary text-3xl mb-6 font-light">nightlife</span>
+              <h3 className="font-serif text-2xl text-on-background mb-6">
+                EVENT<br/>ENTERTAINMENT
+              </h3>
+              <ul className="space-y-3 font-light text-[15px] text-on-surface-variant flex-grow mb-10">
+                <li className="flex items-center gap-3"><div className="w-1 h-1 bg-primary rounded-full"></div> DJ Setup</li>
+                <li className="flex items-center gap-3"><div className="w-1 h-1 bg-primary rounded-full"></div> Jaggo on Rent</li>
+              </ul>
+              <Link href="#event-entertainment" className="font-label-caps text-[11px] text-primary tracking-[0.2em] uppercase flex items-center gap-2 group-hover:gap-3 transition-all">
+                EXPLORE <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
+              </Link>
+            </div>
 
           </div>
-          <div className="lg:col-span-5 flex flex-col gap-8 lg:pl-12">
-            <div className="space-y-4">
-              <p className="font-label-caps text-label-caps text-primary tracking-widest uppercase">
-                Signature Service
+        </section>
+
+        {/* 4. MAIN SERVICE SHOWCASE (Alternating) */}
+        <section className="px-6 md:px-12 max-w-[1600px] mx-auto py-16 space-y-32 md:space-y-48">
+          
+          {/* SERVICE 01 */}
+          <div id="dhol-live-music" className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-center">
+            <div className="relative w-full aspect-[4/3] overflow-hidden bg-secondary/10">
+              <Image 
+                src="/images/home-intro-dhol.png" 
+                alt="Punjabi Dhol Players" 
+                fill 
+                className="object-cover" 
+              />
+            </div>
+            <div className="flex flex-col items-start justify-center pr-4 xl:pr-12">
+              <p className="font-label-caps text-[11px] text-primary tracking-[0.2em] uppercase mb-4 flex items-center gap-3">
+                <span className="text-on-surface-variant">01</span> SIGNATURE SERVICE
               </p>
-              <h2 className="font-headline-xl text-headline-xl text-on-surface">
+              <h2 className="font-serif text-4xl md:text-5xl text-on-background mb-6 leading-tight">
                 PUNJABI DHOL PLAYERS
               </h2>
-            </div>
-            <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-              Experience the raw, unadulterated energy of authentic Punjabi Dhol. Our master percussionists deliver thunderous rhythms that elevate the atmosphere of any grand celebration, rooted deeply in cultural heritage yet presented with modern luxury flair.
-            </p>
-            <div className="space-y-2 border-l-2 border-primary-container pl-6 py-2">
-              <p className="font-label-caps text-label-caps text-on-surface opacity-60">
-                Ideal For:
+              <p className="text-[15px] text-on-surface-variant font-light leading-relaxed mb-10">
+                Experience the raw, unadulterated energy of authentic Punjabi Dhol. Our master percussionists deliver thunderous rhythms that elevate the atmosphere of any grand celebration, rooted deeply in cultural heritage yet presented with modern luxury flair.
               </p>
-              <p className="font-body-md text-body-md text-on-surface">
-                Baraat Entry, Sangeet, Corporate Galas, Grand Openings.
-              </p>
-            </div>
-            <Link
-              className="inline-flex items-center justify-center font-cta text-cta px-8 py-4 bg-primary-container text-on-primary-container hover:bg-secondary-fixed transition-colors duration-300 w-max uppercase shadow-[0_0_15px_rgba(212,175,55,0.15)]"
-              href="/contact"
-            >
-              Enquire Now
-            </Link>
-          </div>
-        </div>
+              
+              <div className="border-t border-b border-primary/20 py-5 w-full mb-10">
+                <p className="text-[12px] font-bold tracking-[0.1em] text-on-surface mb-1">Ideal For:</p>
+                <p className="text-[14px] text-on-surface-variant font-light">Baraat Entry, Sangeet, Corporate Galas, Grand Openings.</p>
+              </div>
 
-        {/* Service: LED Dhol (Feature Right) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
-          <div className="lg:col-span-5 flex flex-col gap-8 lg:pr-12 order-2 lg:order-1">
-            <div className="space-y-4">
-              <p className="font-label-caps text-label-caps text-primary tracking-widest uppercase">
-                Modern Spectacle
+              <Link 
+                href="/contact" 
+                className="inline-flex items-center gap-3 bg-[#171513] text-white px-8 py-4 font-bold text-[11px] tracking-[0.2em] uppercase hover:bg-[#B58A3A] transition-colors group"
+              >
+                ENQUIRE NOW <span className="material-symbols-outlined text-[14px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </Link>
+            </div>
+          </div>
+
+          {/* SERVICE 02 */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-20 items-center">
+            <div className="flex flex-col items-start justify-center pl-4 xl:pl-12 order-2 lg:order-1">
+              <p className="font-label-caps text-[11px] text-primary tracking-[0.2em] uppercase mb-4 flex items-center gap-3">
+                <span className="text-on-surface-variant">02</span> MODERN SPECTACLE
               </p>
-              <h2 className="font-headline-xl text-headline-xl text-on-surface">
-                LED DHOL & DJ FUSION
+              <h2 className="font-serif text-4xl md:text-5xl text-on-background mb-6 leading-tight">
+                LED DHOL &<br/>DJ FUSION
               </h2>
-            </div>
-            <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-              A visually stunning collision of tradition and technology. Our LED Dhol performances synchronize pulsating rhythms with dynamic light displays, seamlessly integrated with high-end DJ setups to create an immersive, nightclub-style experience for your elite guest list.
-            </p>
-            <div className="space-y-2 border-l-2 border-primary-container pl-6 py-2">
-              <p className="font-label-caps text-label-caps text-on-surface opacity-60">
-                Ideal For:
+              <p className="text-[15px] text-on-surface-variant font-light leading-relaxed mb-10">
+                A visually stunning collision of tradition and technology. Our LED Dhol performances synchronize pulsating rhythms with dynamic light displays, seamlessly integrated with high-end DJ setups to create an immersive, nightclub-style experience for your elite guest list.
               </p>
-              <p className="font-body-md text-body-md text-on-surface">
-                Reception After-Parties, Cocktails, High-Profile Club Events.
+              
+              <div className="border-t border-b border-primary/20 py-5 w-full mb-10">
+                <p className="text-[12px] font-bold tracking-[0.1em] text-on-surface mb-1">Ideal For:</p>
+                <p className="text-[14px] text-on-surface-variant font-light">Reception After-Parties, Cocktails, High-Profile Club Events.</p>
+              </div>
+
+              <Link 
+                href="/contact" 
+                className="inline-flex items-center gap-3 bg-[#171513] text-white px-8 py-4 font-bold text-[11px] tracking-[0.2em] uppercase hover:bg-[#B58A3A] transition-colors group"
+              >
+                ENQUIRE NOW <span className="material-symbols-outlined text-[14px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </Link>
+            </div>
+            <div className="relative w-full aspect-[4/3] overflow-hidden bg-secondary/10 order-1 lg:order-2">
+              <Image 
+                src="/images/ganpati-fusion.png" 
+                alt="LED Dhol & DJ Fusion" 
+                fill 
+                className="object-cover" 
+              />
+            </div>
+          </div>
+
+          {/* SERVICE 03 */}
+          <div id="performance" className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-center">
+            <div className="relative w-full aspect-[4/3] overflow-hidden bg-secondary/10">
+              <Image 
+                src="/images/ganpati-dhol.png" 
+                alt="Punjabi Bhangra Group" 
+                fill 
+                className="object-cover object-top" 
+              />
+            </div>
+            <div className="flex flex-col items-start justify-center pr-4 xl:pr-12">
+              <p className="font-label-caps text-[11px] text-primary tracking-[0.2em] uppercase mb-4 flex items-center gap-3">
+                <span className="text-on-surface-variant">03</span> PREMIUM GROUP
               </p>
-            </div>
-            <Link
-              className="inline-flex items-center justify-center font-cta text-cta px-8 py-4 bg-transparent border border-primary-container text-primary hover:bg-primary-container hover:text-on-primary-container transition-colors duration-300 w-max uppercase"
-              href="/contact"
-            >
-              Enquire Now
-            </Link>
-          </div>
-          <div className="lg:col-span-7 h-[600px] relative overflow-hidden group border border-secondary/20 p-2 bg-surface order-1 lg:order-2">
-            <div
-              className="w-full h-full bg-cover bg-center transition-all duration-700 group-hover:scale-105"
-              data-alt="Dynamic shot of an LED illuminated Dhol being played at a modern luxury event. The glowing neon lights of the drum contrast sharply with the dark, upscale club atmosphere. A DJ silhouette is faintly visible in the background against a sophisticated laser lighting rig. The aesthetic is high-contrast, modern luxury nightlife."
-              style={{
-                backgroundImage:
-                  "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKzhMDP0hq7Qmh5zK0spczbcRzqn45a4hdLjxSe81mKM1JupFehmTDzCIkHXx0dfEPz3SulEkPAn6KkEB77RQlzwMB0EK-1QKKAs0XbWvTdLp0FPgM5N-bF5HEMDccnZA8SU3KH2KuLgOFMsBx5D0wf6be_NqDO-tVwI_0h4hIZwTX1nizqy4iXMGGlLkBWA3ekqo-WTZVc7sQo1IHc1FznCxcpJzrN_Su1fy2cazYzKSa39fLUTRL')",
-              }}
-            ></div>
-
-          </div>
-        </div>
-
-        {/* Service: Bhangra Group (Feature Left Asymmetric) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
-          <div className="lg:col-span-8 h-[700px] relative overflow-hidden group border border-primary-container p-2 bg-surface">
-            <div className="absolute top-4 left-4 z-20 bg-background/80 backdrop-blur-md px-4 py-2 border border-primary/30">
-              <span className="font-label-caps text-label-caps text-primary tracking-widest uppercase">
-                Premium Group
-              </span>
-            </div>
-            <div
-              className="w-full h-full bg-cover bg-center filter grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
-              data-alt="A highly stylized, editorial photograph of a professional Punjabi Bhangra dance troupe mid-performance. They are wearing exquisite, heavily embroidered traditional costumes in deep jewel tones and metallic gold. The setting is a lavish stage with minimal, dramatic spotlighting against a black void. Elegant, energetic, and culturally rich."
-              style={{
-                backgroundImage:
-                  "url('https://lh3.googleusercontent.com/aida-public/AB6AXuD4RoAq2yf4GzurqenI7PZRkqbuf6smRyfq8OIMEqxXJAabe_dgg-jX3nYde9P8iUiFJHXIagkgnELttM_IB4CI4eGl3jnSYwapB_pQ0utwn8B-w6B7c3Rv5LLtUPiN-K6wVRzrw1Jx0SwKEQ56bR1t2YovbJ6GridSOTTy4WPNWuJUCs_xrg8Kf4IgvpfLKsjqVu-YGGyNHrE9eNDpiUl662CJqlQUdZsWml9Mlr5jM8ZmbMevJmV0')",
-              }}
-            ></div>
-          </div>
-          <div className="lg:col-span-4 flex flex-col gap-12 lg:pt-24 lg:pl-8">
-            <div className="space-y-6">
-              <h2 className="font-headline-xl text-headline-xl text-on-surface">
+              <h2 className="font-serif text-4xl md:text-5xl text-on-background mb-6 leading-tight">
                 PUNJABI BHANGRA GROUP
               </h2>
-              <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              <p className="text-[15px] text-on-surface-variant font-light leading-relaxed mb-10">
                 Elevate your event with choreographed brilliance. Our professional Bhangra troupes bring authentic Punjabi vigor, resplendent costumes, and synchronized perfection to the stage, ensuring a captivating visual and rhythmic spectacle.
               </p>
-            </div>
-            <div className="space-y-6 bg-surface-container-low p-8 border border-secondary/10">
-              <div className="space-y-2">
-                <p className="font-label-caps text-label-caps text-on-surface opacity-60">
-                  Ideal For:
-                </p>
-                <p className="font-body-md text-body-md text-on-surface">
-                  Main Stage Entertainment, Sangeet Choreography.
-                </p>
+              
+              <div className="border-t border-b border-primary/20 py-5 w-full mb-10 flex flex-col sm:flex-row gap-6 sm:gap-12">
+                <div>
+                  <p className="text-[12px] font-bold tracking-[0.1em] text-on-surface mb-1">Ideal For:</p>
+                  <p className="text-[14px] text-on-surface-variant font-light">Main Stage Entertainment, Sangeet Choreography.</p>
+                </div>
+                <div>
+                  <p className="text-[12px] font-bold tracking-[0.1em] text-on-surface mb-1">Ensemble Options:</p>
+                  <p className="text-[14px] text-on-surface-variant font-light">4 to 12 Dancers available.</p>
+                </div>
               </div>
-              <div className="space-y-2">
-                <p className="font-label-caps text-label-caps text-on-surface opacity-60">
-                  Ensemble Options:
-                </p>
-                <p className="font-body-md text-body-md text-on-surface">
-                  4 to 12 Dancers available.
-                </p>
-              </div>
-            </div>
-            <Link
-              className="inline-flex items-center justify-center font-cta text-cta px-8 py-4 bg-primary-container text-on-primary-container hover:bg-secondary-fixed transition-colors duration-300 w-full uppercase shadow-[0_0_15px_rgba(212,175,55,0.15)]"
-              href="/contact"
-            >
-              Enquire Now
-            </Link>
-          </div>
-        </div>
-      </section>
 
-      {/* Final CTA Section */}
-      <section className="relative py-32 px-margin-mobile md:px-margin-desktop overflow-hidden border-t border-secondary/20 flex flex-col items-center justify-center text-center">
-        <div className="absolute inset-0 texture-pattern opacity-50"></div>
-        <div className="relative z-10 max-w-3xl flex flex-col items-center gap-8">
-          <span
-            className="material-symbols-outlined text-primary text-6xl"
-            style={{ fontVariationSettings: "'wght' 300" }}
-          >
-            diamond
-          </span>
-          <h2 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">
-            LET'S CRAFT YOUR CELEBRATION
-          </h2>
-          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-            Partner with VIPIN PUNJABI DHOL to architect an unforgettable auditory and visual experience for your next premier event.
-          </p>
-          <div className="flex gap-4 mt-8">
-            <Link
-              className="inline-flex items-center justify-center font-cta text-cta px-8 py-4 bg-primary-container text-on-primary-container hover:bg-secondary-fixed transition-colors duration-300 uppercase shadow-[0_0_20px_rgba(212,175,55,0.2)]"
-              href="/contact"
-            >
-              Contact Us
-            </Link>
+              <Link 
+                href="/contact" 
+                className="inline-flex items-center gap-3 bg-[#171513] text-white px-8 py-4 font-bold text-[11px] tracking-[0.2em] uppercase hover:bg-[#B58A3A] transition-colors group"
+              >
+                ENQUIRE NOW <span className="material-symbols-outlined text-[14px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
-    <Footer />
+
+          {/* SERVICE 04 */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-20 items-center">
+            <div className="flex flex-col items-start justify-center pl-4 xl:pl-12 order-2 lg:order-1">
+              <p className="font-label-caps text-[11px] text-primary tracking-[0.2em] uppercase mb-4 flex items-center gap-3">
+                <span className="text-on-surface-variant">04</span> LIVE PERFORMANCE
+              </p>
+              <h2 className="font-serif text-4xl md:text-5xl text-on-background mb-6 leading-tight">
+                DHOL & SINGER
+              </h2>
+              <p className="text-[15px] text-on-surface-variant font-light leading-relaxed mb-10">
+                A dynamic live combination of powerful Punjabi percussion and live vocals, designed to keep guests engaged from the first beat to the final celebration.
+              </p>
+              
+              <div className="border-t border-b border-primary/20 py-5 w-full mb-10">
+                <p className="text-[12px] font-bold tracking-[0.1em] text-on-surface mb-1">Ideal For:</p>
+                <p className="text-[14px] text-on-surface-variant font-light">Wedding Entries, Sangeet, Receptions, Private Celebrations.</p>
+              </div>
+
+              <Link 
+                href="/contact" 
+                className="inline-flex items-center gap-3 bg-[#171513] text-white px-8 py-4 font-bold text-[11px] tracking-[0.2em] uppercase hover:bg-[#B58A3A] transition-colors group"
+              >
+                ENQUIRE NOW <span className="material-symbols-outlined text-[14px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </Link>
+            </div>
+            <div className="relative w-full aspect-[4/3] overflow-hidden bg-secondary/10 order-1 lg:order-2">
+              <Image 
+                src="/images/final-collage-1.png" 
+                alt="Dhol & Singer" 
+                fill 
+                className="object-cover" 
+              />
+            </div>
+          </div>
+
+          {/* SERVICE 05 */}
+          <div id="event-entertainment" className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-center">
+            <div className="relative w-full aspect-[4/3] overflow-hidden bg-secondary/10">
+              <Image 
+                src="/images/final-collage-2.png" 
+                alt="DJ & Event Sound" 
+                fill 
+                className="object-cover" 
+              />
+            </div>
+            <div className="flex flex-col items-start justify-center pr-4 xl:pr-12">
+              <p className="font-label-caps text-[11px] text-primary tracking-[0.2em] uppercase mb-4 flex items-center gap-3">
+                <span className="text-on-surface-variant">05</span> COMPLETE EXPERIENCE
+              </p>
+              <h2 className="font-serif text-4xl md:text-5xl text-on-background mb-6 leading-tight">
+                DJ & EVENT SOUND
+              </h2>
+              <p className="text-[15px] text-on-surface-variant font-light leading-relaxed mb-10">
+                Complete your celebration with professional DJ entertainment and a carefully coordinated sound experience designed to complement live Dhol performances and keep the energy moving throughout the event.
+              </p>
+              
+              <div className="border-t border-b border-primary/20 py-5 w-full mb-10">
+                <p className="text-[12px] font-bold tracking-[0.1em] text-on-surface mb-1">Ideal For:</p>
+                <p className="text-[14px] text-on-surface-variant font-light">Receptions, After-Parties, Corporate Events, Private Celebrations.</p>
+              </div>
+
+              <Link 
+                href="/contact" 
+                className="inline-flex items-center gap-3 bg-[#171513] text-white px-8 py-4 font-bold text-[11px] tracking-[0.2em] uppercase hover:bg-[#B58A3A] transition-colors group"
+              >
+                ENQUIRE NOW <span className="material-symbols-outlined text-[14px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </Link>
+            </div>
+          </div>
+
+        </section>
+
+        {/* 5. THE VIPIN STANDARD */}
+        <section className="bg-surface border-t border-b border-secondary/10 py-24 md:py-32 px-6">
+          <div className="max-w-[1400px] mx-auto text-center">
+            <p className="font-label-caps text-[11px] text-primary tracking-[0.2em] uppercase mb-4">
+              THE VIPIN STANDARD
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl text-on-background mb-16 md:mb-24">
+              TRADITION. ENERGY. EXCELLENCE.
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+              <div className="flex flex-col items-center">
+                <span className="material-symbols-outlined text-primary text-[40px] mb-6 font-light">verified</span>
+                <h4 className="font-bold text-[13px] tracking-[0.1em] uppercase text-on-surface mb-3">AUTHENTIC CULTURE</h4>
+                <p className="text-[14px] text-on-surface-variant font-light leading-relaxed">
+                  Rooted in genuine Punjabi musical tradition.
+                </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="material-symbols-outlined text-primary text-[40px] mb-6 font-light">groups</span>
+                <h4 className="font-bold text-[13px] tracking-[0.1em] uppercase text-on-surface mb-3">PROFESSIONAL PERFORMANCE</h4>
+                <p className="text-[14px] text-on-surface-variant font-light leading-relaxed">
+                  Experienced performers who understand timing, energy and stage presence.
+                </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="material-symbols-outlined text-primary text-[40px] mb-6 font-light">star</span>
+                <h4 className="font-bold text-[13px] tracking-[0.1em] uppercase text-on-surface mb-3">PREMIUM PRESENTATION</h4>
+                <p className="text-[14px] text-on-surface-variant font-light leading-relaxed">
+                  Every performance is designed to feel worthy of the occasion.
+                </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="material-symbols-outlined text-primary text-[40px] mb-6 font-light">handshake</span>
+                <h4 className="font-bold text-[13px] tracking-[0.1em] uppercase text-on-surface mb-3">SEAMLESS EXPERIENCE</h4>
+                <p className="text-[14px] text-on-surface-variant font-light leading-relaxed">
+                  From enquiry to performance, every detail is handled professionally.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 6. FINAL CTA */}
+        <section className="relative w-full bg-surface-container py-32 px-6 overflow-hidden">
+          <div
+            className="absolute left-0 bottom-0 w-full md:w-1/2 h-[600px] bg-cover bg-left-bottom opacity-10 md:opacity-100 mix-blend-multiply"
+            style={{
+              backgroundImage: "url('/images/final-collage-3.png')",
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat"
+            }}
+          ></div>
+          
+          <div className="relative z-10 max-w-2xl mx-auto md:ml-auto md:mr-[10%] text-center flex flex-col items-center">
+            <p className="font-label-caps text-[11px] text-primary tracking-[0.2em] uppercase mb-4">
+              READY TO MAKE AN ENTRANCE?
+            </p>
+            <h2 className="font-serif text-5xl md:text-7xl text-on-background mb-6 leading-none">
+              LET THE DHOL SPEAK.
+            </h2>
+            <p className="text-[16px] md:text-[18px] text-on-surface-variant font-light leading-relaxed mb-12">
+              Tell us about your celebration and let's create an experience your guests will remember.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center w-full max-w-md">
+              <Link
+                href="/contact"
+                className="bg-[#B58A3A] text-white px-8 py-4 font-bold text-[12px] tracking-[0.15em] uppercase hover:bg-[#8F6A27] transition-all duration-300 flex-1 text-center"
+              >
+                BOOK YOUR DATE <span className="material-symbols-outlined align-middle text-[14px] ml-2">arrow_forward</span>
+              </Link>
+              <a
+                href="https://wa.me/917206110529"
+                className="bg-transparent border border-[#B58A3A] text-[#B58A3A] px-8 py-4 font-bold text-[12px] tracking-[0.15em] uppercase hover:bg-[#B58A3A]/10 transition-all duration-300 flex-1 text-center flex items-center justify-center gap-2"
+              >
+                <span className="material-symbols-outlined text-[16px]">chat</span> WHATSAPP US
+              </a>
+            </div>
+
+            <div className="mt-16 pt-12 border-t border-secondary/20 flex flex-col md:flex-row items-center justify-center gap-8 text-[13px] font-bold text-on-surface tracking-[0.1em] uppercase">
+              <a href="tel:7206110529" className="flex items-center gap-3 hover:text-primary transition-colors">
+                <span className="material-symbols-outlined text-primary text-[18px]">call</span> 7206110529
+              </a>
+              <a href="https://www.instagram.com/vipin_dhol_events_?igsi=aTJrdWIxYnBxcW05" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-primary transition-colors">
+                <span className="material-symbols-outlined text-primary text-[18px]">photo_camera</span> @VIPIN_DHOL_EVENTS_
+              </a>
+              <span className="flex items-center gap-3">
+                <span className="material-symbols-outlined text-primary text-[18px]">location_on</span> KHARGHAR, NAVI MUMBAI
+              </span>
+            </div>
+          </div>
+        </section>
+
+      </main>
+      <Footer />
     </>
   );
 }
