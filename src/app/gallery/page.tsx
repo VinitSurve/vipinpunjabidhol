@@ -10,7 +10,7 @@ const galleryImages: GalleryImage[] = [
   // 0: Original Large Portrait
   {
     id: "baraat-1",
-    src: "/images/gallery-baraat-1.png",
+    src: "/images/gallery-baraat-1.webp",
     alt: "Baraat Entrance",
     category: "Baraat",
     title: "The Royal Entrance",
@@ -20,7 +20,7 @@ const galleryImages: GalleryImage[] = [
   // 1: Original Landscape
   {
     id: "wedding-1",
-    src: "/images/gallery-wedding-1.png",
+    src: "/images/gallery-wedding-1.webp",
     alt: "Wedding Celebration",
     category: "Weddings",
     subtitle: "Weddings",
@@ -29,7 +29,7 @@ const galleryImages: GalleryImage[] = [
   // 2: Owner Photo 1 (Detail/Portrait insert)
   {
     id: "owner-1",
-    src: "/images/2.jpeg",
+    src: "/images/2.webp",
     alt: "Vipin - Behind the Beat",
     category: "All",
     title: "Behind the Beat",
@@ -39,7 +39,7 @@ const galleryImages: GalleryImage[] = [
   // 3: Original Square Detail
   {
     id: "detail-1",
-    src: "/images/gallery-detail-1.png",
+    src: "/images/gallery-detail-1.webp",
     alt: "Dhol Detail",
     category: "Dhol",
     heightClass: "h-auto aspect-square"
@@ -47,7 +47,7 @@ const galleryImages: GalleryImage[] = [
   // 4: Owner Photo 2
   {
     id: "owner-2",
-    src: "/images/8.jpeg",
+    src: "/images/8.webp",
     alt: "The Man Behind the Dhol",
     category: "Baraat",
     title: "The Man Behind the Dhol",
@@ -56,7 +56,7 @@ const galleryImages: GalleryImage[] = [
   // 5: Original Tall Portrait
   {
     id: "bhangra-1",
-    src: "/images/gallery-bhangra-1.png",
+    src: "/images/gallery-bhangra-1.webp",
     alt: "Bhangra Stage Performance",
     category: "Bhangra",
     title: "Stage Energy",
@@ -66,7 +66,7 @@ const galleryImages: GalleryImage[] = [
   // 6: Original Landscape Procession
   {
     id: "ganpati-1",
-    src: "/images/gallery-ganpati-1.png",
+    src: "/images/gallery-ganpati-1.webp",
     alt: "Ganpati Visarjan",
     category: "Ganpati",
     heightClass: "h-auto"
@@ -74,7 +74,7 @@ const galleryImages: GalleryImage[] = [
   // 7: Owner Photo 3
   {
     id: "owner-3",
-    src: "/images/7.jpeg",
+    src: "/images/7.webp",
     alt: "Built Around Rhythm",
     category: "Baraat",
     title: "Built Around Rhythm",
@@ -83,7 +83,7 @@ const galleryImages: GalleryImage[] = [
   // 8: Original Medium Portrait
   {
     id: "wedding-2",
-    src: "/images/gallery-wedding-2.png",
+    src: "/images/gallery-wedding-2.webp",
     alt: "Wedding Entrance",
     category: "Weddings",
     subtitle: "Weddings",
@@ -92,7 +92,7 @@ const galleryImages: GalleryImage[] = [
   // 9: Owner Photo 4
   {
     id: "owner-4",
-    src: "/images/9.jpeg",
+    src: "/images/9.webp",
     alt: "Behind the Celebration",
     category: "All",
     title: "Behind the Celebration",

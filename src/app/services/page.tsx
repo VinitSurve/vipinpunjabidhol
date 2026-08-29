@@ -17,7 +17,7 @@ export default function ServicesPage() {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: "url('/images/home-hero-dhol.png')",
+              backgroundImage: "url('/images/home-hero-dhol.webp')",
             }}
           ></div>
           {/* Cinematic overlay */}
@@ -112,7 +112,7 @@ export default function ServicesPage() {
           <div id="dhol-live-music" className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-center">
             <div className="relative w-full aspect-[4/3] overflow-hidden bg-secondary/10">
               <Image 
-                src="/images/dhol-players-service.png" 
+                src="/images/dhol-players-service.webp" 
                 alt="Punjabi Dhol Players" 
                 fill 
                 className="object-cover object-top" 
@@ -170,7 +170,7 @@ export default function ServicesPage() {
             </div>
             <div className="relative w-full aspect-[4/3] overflow-hidden bg-secondary/10 order-1 lg:order-2">
               <Image 
-                src="/images/led-dhol-service.png" 
+                src="/images/led-dhol-service.webp" 
                 alt="LED Dhol & DJ Fusion" 
                 fill 
                 className="object-cover" 
@@ -182,7 +182,7 @@ export default function ServicesPage() {
           <div id="bhangra-group" className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-center">
             <div className="relative w-full aspect-[4/3] overflow-hidden bg-secondary/10">
               <Image 
-                src="/images/bhangra-group-service.png" 
+                src="/images/bhangra-group-service.webp" 
                 alt="Punjabi Bhangra Group" 
                 fill 
                 className="object-cover object-top" 
@@ -246,7 +246,7 @@ export default function ServicesPage() {
             </div>
             <div className="relative w-full aspect-[4/3] overflow-hidden bg-secondary/10 order-1 lg:order-2">
               <Image 
-                src="/images/dhol-singer-service.png" 
+                src="/images/dhol-singer-service.webp" 
                 alt="Dhol & Singer" 
                 fill 
                 className="object-cover" 
@@ -258,7 +258,7 @@ export default function ServicesPage() {
           <div id="event-entertainment" className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-center">
             <div className="relative w-full aspect-[4/3] overflow-hidden bg-secondary/10">
               <Image 
-                src="/images/final-collage-2.png" 
+                src="/images/final-collage-2.webp" 
                 alt="DJ & Event Sound" 
                 fill 
                 className="object-cover" 
@@ -339,7 +339,7 @@ export default function ServicesPage() {
           <div
             className="absolute left-0 bottom-0 w-full md:w-1/2 h-[600px] bg-cover bg-left-bottom opacity-10 md:opacity-100 mix-blend-multiply"
             style={{
-              backgroundImage: "url('/images/final-collage-3.png')",
+              backgroundImage: "url('/images/final-collage-3.webp')",
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat"
             }}

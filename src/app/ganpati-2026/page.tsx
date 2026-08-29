@@ -38,7 +38,7 @@ export default function GanpatiPage() {
           {/* Hero Right Image */}
           <div className="order-1 md:order-2 relative aspect-square lg:aspect-[4/5] w-full overflow-hidden">
             <img 
-              src="/images/ganpati-fusion.png" 
+              src="/images/ganpati-fusion.webp" 
               alt="Ganpati 2026 Celebration" 
               className="absolute inset-0 w-full h-full object-cover object-center" 
             />
@@ -70,9 +70,9 @@ export default function GanpatiPage() {
               {/* Row 1, Col 2: Image (Dhol B&W) */}
               <div className="relative aspect-square md:aspect-auto w-full h-full overflow-hidden">
                 <img 
-                  src="/images/ganpati-dhol.png" 
+                  src="/images/ganpati-dhol.webp" 
                   alt="Traditional Punjabi Dhol" 
-                  className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 cursor-pointer" 
+                  className="absolute inset-0 w-full h-full object-cover transition-all duration-700 cursor-pointer" 
                 />
               </div>
 
@@ -107,9 +107,9 @@ export default function GanpatiPage() {
               {/* Row 2, Col 2: Image (Fusion/DJ) */}
               <div className="relative aspect-square md:aspect-auto w-full h-full overflow-hidden">
                 <img 
-                  src="/images/ganpati-hero.png" 
+                  src="/images/ganpati-hero.webp" 
                   alt="DJ Mix Dhol Fusion" 
-                  className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 cursor-pointer" 
+                  className="absolute inset-0 w-full h-full object-cover transition-all duration-700 cursor-pointer" 
                 />
               </div>
 

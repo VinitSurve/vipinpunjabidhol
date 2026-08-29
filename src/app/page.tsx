@@ -37,7 +37,7 @@ export default function Home() {
             data-alt="A high quality image of a Punjabi Dhol player"
             style={{
               backgroundImage:
-                "url('/images/home-hero-dhol.png')",
+                "url('/images/home-hero-dhol.webp')",
             }}
           ></div>
         </div>
@@ -61,7 +61,7 @@ export default function Home() {
       {/* 3. Editorial Intro */}
       <section className="py-section-gap px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-12 md:gap-24 items-center">
         <div className="order-2 md:order-1 relative aspect-[4/5] w-full max-w-md mx-auto md:max-w-none">
-          <div className="bg-cover bg-center w-full h-full relative z-10" data-alt="High quality image of a Dhol player in an orange outfit with a man on a white horse" style={{backgroundImage: "url('/images/home-intro-dhol.png')"}}></div>
+          <div className="bg-cover bg-center w-full h-full relative z-10" data-alt="High quality image of a Dhol player in an orange outfit with a man on a white horse" style={{backgroundImage: "url('/images/home-intro-dhol.webp')"}}></div>
         </div>
         <div className="order-1 md:order-2 flex flex-col gap-6 items-start">
           <span className="font-label-caps text-label-caps text-secondary tracking-widest uppercase">THE SOUND OF CELEBRATION</span>
@@ -218,7 +218,7 @@ export default function Home() {
             <div className="col-span-1 relative w-full h-full rounded-2xl overflow-hidden">
               <img
                 className="absolute inset-0 w-full h-full object-cover object-center"
-                src="/images/final-collage-1.png"
+                src="/images/final-collage-1.webp"
                 alt="Joyous groom with Dhol player"
               />
             </div>
@@ -226,14 +226,14 @@ export default function Home() {
               <div className="relative flex-1 rounded-2xl overflow-hidden">
                 <img
                   className="absolute inset-0 w-full h-full object-cover object-center"
-                  src="/images/final-collage-2.png"
+                  src="/images/final-collage-2.webp"
                   alt="Close up of traditional Dhol"
                 />
               </div>
               <div className="relative flex-1 rounded-2xl overflow-hidden">
                 <img
                   className="absolute inset-0 w-full h-full object-cover object-center"
-                  src="/images/final-collage-3.png"
+                  src="/images/final-collage-3.webp"
                   alt="Bhangra dancers performing"
                 />
               </div>

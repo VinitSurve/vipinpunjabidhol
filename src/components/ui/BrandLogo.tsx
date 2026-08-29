@@ -25,7 +25,7 @@ export default function BrandLogo({ variant = "default", className = "" }: Brand
   return (
     <div className={`relative flex-shrink-0 flex items-center justify-center rounded-full overflow-hidden border border-[#B58A3A]/40 shadow-lg ${sizeClasses} ${className}`}>
       <Image
-        src="/images/brand/vipin-punjabi-dhol-logo.jpg"
+        src="/images/brand/vipin-punjabi-dhol-logo.webp"
         alt="VIPIN PUNJABI DHOL & EVENTS Official Logo"
         fill
         sizes="(max-width: 768px) 100vw, 50vw"
