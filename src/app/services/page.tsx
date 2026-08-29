@@ -112,10 +112,10 @@ export default function ServicesPage() {
           <div id="dhol-live-music" className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-center">
             <div className="relative w-full aspect-[4/3] overflow-hidden bg-secondary/10">
               <Image 
-                src="/images/home-intro-dhol.png" 
+                src="/images/dhol-players-service.png" 
                 alt="Punjabi Dhol Players" 
                 fill 
-                className="object-cover" 
+                className="object-cover object-top" 
               />
             </div>
             <div className="flex flex-col items-start justify-center pr-4 xl:pr-12">
@@ -170,7 +170,7 @@ export default function ServicesPage() {
             </div>
             <div className="relative w-full aspect-[4/3] overflow-hidden bg-secondary/10 order-1 lg:order-2">
               <Image 
-                src="/images/ganpati-fusion.png" 
+                src="/images/led-dhol-service.png" 
                 alt="LED Dhol & DJ Fusion" 
                 fill 
                 className="object-cover" 
@@ -182,7 +182,7 @@ export default function ServicesPage() {
           <div id="performance" className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-center">
             <div className="relative w-full aspect-[4/3] overflow-hidden bg-secondary/10">
               <Image 
-                src="/images/ganpati-dhol.png" 
+                src="/images/bhangra-group-service.png" 
                 alt="Punjabi Bhangra Group" 
                 fill 
                 className="object-cover object-top" 
@@ -246,7 +246,7 @@ export default function ServicesPage() {
             </div>
             <div className="relative w-full aspect-[4/3] overflow-hidden bg-secondary/10 order-1 lg:order-2">
               <Image 
-                src="/images/final-collage-1.png" 
+                src="/images/dhol-singer-service.png" 
                 alt="Dhol & Singer" 
                 fill 
                 className="object-cover" 
