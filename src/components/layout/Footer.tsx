@@ -1,5 +1,3 @@
-"use client";
-
 import BrandLogo from "../ui/BrandLogo";
 import Link from "next/link";
 import InstagramIcon from "../ui/InstagramIcon";
@@ -38,7 +36,7 @@ export default function Footer() {
               <TelephoneIcon className="w-4 h-4" />
               7206110529
             </a>
-            <a href="https://www.instagram.com/vipin_dhol_events_?igsi=aTJrdWIxYnBxcW05" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-label-caps text-[11px] tracking-[0.15em] text-on-surface hover:text-primary transition-colors">
+            <a href="https://www.instagram.com/vipin_dhol_events_?igsi=aTJrdWIxYnBxcW05" target="_blank" rel="noopener noreferrer" aria-label="Follow Vipin Punjabi Dhol & Events on Instagram" className="flex items-center gap-2 font-label-caps text-[11px] tracking-[0.15em] text-on-surface hover:text-primary transition-colors">
               <InstagramIcon className="w-4 h-4" />
               @VIPIN_DHOL_EVENTS_
             </a>
@@ -61,11 +59,6 @@ export default function Footer() {
           <div className="flex flex-col gap-2">
             <p className="font-label-caps text-[9px] md:text-[10px] tracking-[0.2em] text-on-surface-variant uppercase">
               © 2026 VIPIN PUNJABI DHOL & EVENTS
-            </p>
-            <p className="font-label-caps text-[8px] tracking-[0.1em] text-on-surface/40 hover:text-on-surface-variant transition-colors flex flex-col gap-1">
-              <a href="https://www.flaticon.com/free-icons/instagram" title="instagram icons" target="_blank" rel="noopener noreferrer">Instagram icons created by Magnific - Flaticon</a>
-              <a href="https://www.flaticon.com/free-icons/telephone" title="telephone icons" target="_blank" rel="noopener noreferrer">Telephone icons created by Ricardo Ruiz - Flaticon</a>
-              <a href="https://www.flaticon.com/free-icons/locations" title="locations icons" target="_blank" rel="noopener noreferrer">Locations icons created by Magnific - Flaticon</a>
             </p>
           </div>
           <p className="font-label-caps text-[9px] md:text-[10px] tracking-[0.2em] text-on-surface-variant uppercase">

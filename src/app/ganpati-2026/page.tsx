@@ -1,9 +1,30 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import Image from "next/image";
 import Footer from "@/components/layout/Footer";
+import { SITE_URL } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Ganpati 2026 - VIPIN PUNJABI DHOL",
+  title: "Ganpati 2026 — Punjabi Dhol & Entertainment Bookings Open",
+  description:
+    "Book Punjabi Dhol, Bhangra, LED Dhol & DJ Fusion for Ganpati 2026 celebrations. Advance bookings now open for Mumbai & Navi Mumbai. Experience authentic rhythm at your Ganpati festival.",
+  alternates: {
+    canonical: `${SITE_URL}/ganpati-2026`,
+  },
+  openGraph: {
+    title: "Ganpati 2026 — Punjabi Dhol & Entertainment | Vipin Punjabi Dhol & Events",
+    description:
+      "Advance bookings open for Ganpati 2026. Book authentic Punjabi Dhol, Bhangra, LED Dhol & DJ Fusion for your celebration in Mumbai & Navi Mumbai.",
+    url: `${SITE_URL}/ganpati-2026`,
+    images: [
+      {
+        url: "/images/ganpati-fusion.webp",
+        width: 1200,
+        height: 630,
+        alt: "Ganpati 2026 celebration with Punjabi Dhol and entertainment",
+      },
+    ],
+  },
 };
 
 export default function GanpatiPage() {
@@ -37,10 +58,13 @@ export default function GanpatiPage() {
 
           {/* Hero Right Image */}
           <div className="order-1 md:order-2 relative aspect-square lg:aspect-[4/5] w-full overflow-hidden">
-            <img 
+            <Image 
               src="/images/ganpati-fusion.webp" 
-              alt="Ganpati 2026 Celebration" 
-              className="absolute inset-0 w-full h-full object-cover object-center" 
+              alt="Ganpati 2026 celebration with Punjabi Dhol and Bhangra performers" 
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover object-center" 
             />
           </div>
         </section>
@@ -67,12 +91,15 @@ export default function GanpatiPage() {
                 </p>
               </div>
 
-              {/* Row 1, Col 2: Image (Dhol B&W) */}
+              {/* Row 1, Col 2: Image (Dhol) */}
               <div className="relative aspect-square md:aspect-auto w-full h-full overflow-hidden">
-                <img 
+                <Image 
                   src="/images/ganpati-dhol.webp" 
-                  alt="Traditional Punjabi Dhol" 
-                  className="absolute inset-0 w-full h-full object-cover transition-all duration-700 cursor-pointer" 
+                  alt="Traditional Punjabi Dhol instrument with intricate carvings, used in Ganpati celebrations" 
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition-all duration-700 cursor-pointer" 
+                  loading="lazy"
                 />
               </div>
 
@@ -106,10 +133,13 @@ export default function GanpatiPage() {
 
               {/* Row 2, Col 2: Image (Fusion/DJ) */}
               <div className="relative aspect-square md:aspect-auto w-full h-full overflow-hidden">
-                <img 
+                <Image 
                   src="/images/ganpati-hero.webp" 
-                  alt="DJ Mix Dhol Fusion" 
-                  className="absolute inset-0 w-full h-full object-cover transition-all duration-700 cursor-pointer" 
+                  alt="DJ Mix and Dhol Fusion performance for Ganpati celebration" 
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition-all duration-700 cursor-pointer" 
+                  loading="lazy"
                 />
               </div>
 

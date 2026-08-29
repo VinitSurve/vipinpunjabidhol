@@ -2,9 +2,30 @@ import Link from "next/link";
 import Footer from "@/components/layout/Footer";
 import { Metadata } from "next";
 import Image from "next/image";
+import { SITE_URL } from "@/lib/siteConfig";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 export const metadata: Metadata = {
-  title: "Services - VIPIN PUNJABI DHOL & EVENTS",
+  title: "Punjabi Dhol, Bhangra, LED Dhol & Event Entertainment Services",
+  description:
+    "Discover our full range of premium entertainment services: Punjabi Dhol Players, Bhangra Groups, LED Dhol & DJ Fusion, Dhol & Singer, and complete event sound. Serving Mumbai & Navi Mumbai.",
+  alternates: {
+    canonical: `${SITE_URL}/services`,
+  },
+  openGraph: {
+    title: "Punjabi Dhol, Bhangra, LED Dhol & Event Entertainment Services | Vipin Punjabi Dhol",
+    description:
+      "Premium Punjabi entertainment services for weddings, Baraat, Ganpati & corporate events in Mumbai & Navi Mumbai. Dhol, Bhangra, LED Dhol, Singer & DJ.",
+    url: `${SITE_URL}/services`,
+    images: [
+      {
+        url: "/images/dhol-players-service.webp",
+        width: 1200,
+        height: 630,
+        alt: "Punjabi Dhol Players performing at a premium wedding event",
+      },
+    ],
+  },
 };
 
 export default function ServicesPage() {
@@ -359,15 +380,15 @@ export default function ServicesPage() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center w-full max-w-md">
               <Link
                 href="/contact"
-                className="bg-[#B58A3A] text-white px-8 py-4 font-bold text-[12px] tracking-[0.15em] uppercase hover:bg-[#8F6A27] transition-all duration-300 flex-1 text-center"
+                className="bg-[#B58A3A] text-white px-8 py-4 font-bold text-[12px] tracking-[0.15em] uppercase hover:bg-[#8F6A27] transition-all duration-300 flex-1 text-center flex items-center justify-center whitespace-nowrap"
               >
                 BOOK YOUR DATE <span className="material-symbols-outlined align-middle text-[14px] ml-2">arrow_forward</span>
               </Link>
               <a
                 href="https://wa.me/917206110529"
-                className="bg-transparent border border-[#B58A3A] text-[#B58A3A] px-8 py-4 font-bold text-[12px] tracking-[0.15em] uppercase hover:bg-[#B58A3A]/10 transition-all duration-300 flex-1 text-center flex items-center justify-center gap-2"
+                className="bg-transparent border border-[#B58A3A] text-[#B58A3A] px-8 py-4 font-bold text-[12px] tracking-[0.15em] uppercase hover:bg-[#B58A3A]/10 transition-all duration-300 flex-1 flex items-center justify-center gap-2 whitespace-nowrap"
               >
-                <span className="material-symbols-outlined text-[16px]">chat</span> WHATSAPP US
+                <WhatsAppIcon className="w-5 h-5" /> WHATSAPP US
               </a>
             </div>
 

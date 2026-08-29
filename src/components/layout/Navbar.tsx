@@ -56,6 +56,9 @@ export default function Navbar() {
           <a
             className="font-cta text-cta flex items-center gap-2 bg-surface-container text-on-background border border-on-background px-6 py-3 transition-colors hover:bg-surface-variant uppercase tracking-widest hidden xl:flex"
             href="https://wa.me/917206110529"
+            aria-label="Contact Vipin Punjabi Dhol & Events on WhatsApp"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             <WhatsAppIcon className="w-5 h-5" />
             WhatsApp
@@ -113,7 +116,13 @@ export default function Navbar() {
             })}
             
             <div className="w-full border-t border-[#B58A3A]/20 mt-4 pt-8 flex flex-col gap-6">
-              <a href="https://wa.me/917206110529" className="font-label-caps text-sm uppercase tracking-widest text-[#FFFDF8] hover:text-[#B58A3A] flex items-center gap-3 transition-colors">
+              <a
+                href="https://wa.me/917206110529"
+                className="font-label-caps text-sm uppercase tracking-widest text-[#FFFDF8] hover:text-[#B58A3A] flex items-center gap-3 transition-colors"
+                aria-label="Contact Vipin Punjabi Dhol & Events on WhatsApp"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 <WhatsAppIcon className="w-6 h-6" />
                 WhatsApp Us
               </a>

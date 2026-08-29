@@ -1,6 +1,24 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+import Image from "next/image";
 import Footer from "@/components/layout/Footer";
 import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
+import { SITE_URL } from "@/lib/siteConfig";
+
+export const metadata: Metadata = {
+  title: "Punjabi Dhol, Bhangra & LED Entertainment for Weddings | Mumbai",
+  description:
+    "Book authentic Punjabi Dhol players, Bhangra groups, LED Dhol performers & live entertainment for weddings, Baraat, Ganpati and corporate events across Mumbai & Navi Mumbai. Call +91 7206110529.",
+  alternates: {
+    canonical: `${SITE_URL}/`,
+  },
+  openGraph: {
+    title: "Punjabi Dhol, Bhangra & LED Entertainment for Weddings | Vipin Punjabi Dhol & Events",
+    description:
+      "Authentic Punjabi entertainment for weddings, Baraat, Ganpati & corporate events across Mumbai & Navi Mumbai. Book now.",
+    url: `${SITE_URL}/`,
+  },
+};
 
 export default function Home() {
   return (
@@ -32,14 +50,14 @@ export default function Home() {
           </div>
         </div>
         <div className="relative h-[60vh] md:h-[80vh] w-full">
-          <div
-            className="bg-cover bg-center w-full h-full"
-            data-alt="A high quality image of a Punjabi Dhol player"
-            style={{
-              backgroundImage:
-                "url('/images/home-hero-dhol.webp')",
-            }}
-          ></div>
+          <Image
+            src="/images/home-hero-dhol.webp"
+            alt="Punjabi Dhol player performing at a grand wedding celebration"
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover object-center"
+          />
         </div>
       </section>
 
@@ -61,7 +79,13 @@ export default function Home() {
       {/* 3. Editorial Intro */}
       <section className="py-section-gap px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-12 md:gap-24 items-center">
         <div className="order-2 md:order-1 relative aspect-[4/5] w-full max-w-md mx-auto md:max-w-none">
-          <div className="bg-cover bg-center w-full h-full relative z-10" data-alt="High quality image of a Dhol player in an orange outfit with a man on a white horse" style={{backgroundImage: "url('/images/home-intro-dhol.webp')"}}></div>
+          <Image
+            src="/images/home-intro-dhol.webp"
+            alt="Punjabi Dhol player in orange traditional attire performing at a Baraat alongside a white horse"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover object-center"
+          />
         </div>
         <div className="order-1 md:order-2 flex flex-col gap-6 items-start">
           <span className="font-label-caps text-label-caps text-secondary tracking-widest uppercase">THE SOUND OF CELEBRATION</span>
@@ -93,11 +117,13 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Service Card 1 */}
             <Link className="group relative aspect-[3/4] overflow-hidden champagne-border-1px block" href="/services#dhol-live-music">
-              <img
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                data-alt="Close up editorial portrait of a traditional Punjabi Dhol player. High contrast, dark cinematic lighting focusing on the intricate carvings of the wooden dhol drum and the performer's intense expression. Metallic gold accents on the attire shine against the obsidian background. Luxury minimalist style."
+              <Image
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAXiUVGgzHNoi6eAvmCZy1xeZILC_zPOL72j4J4leUnyrvCGSyrsexewBAzP3yQ2u4s_-hQFNecnIUHoaeQD2ne-VglxY4r_k8z-b6QlyOlP78CcKeUZJRK1dQhhp7qYYfS_LVQ-2HD2hBc4VrvArWtYF-13n8q3MM1VsvduHY1K7B0eNyS8O0KNOOzaywMzFAi-LdVg0frV_Kpmqhocl-jnvwXfqriPmZC4OmCc5L83xwyDW0j1RR"
-                alt="Punjabi Dhol"
+                alt="Punjabi Dhol player in traditional attire performing at a premium event"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                loading="lazy"
               />
               <div className="absolute inset-0 card-scrim"></div>
               <div className="absolute inset-0 border border-primary/0 group-hover:border-primary/50 transition-colors duration-300 z-10 m-2"></div>
@@ -115,11 +141,13 @@ export default function Home() {
             </Link>
             {/* Service Card 2 */}
             <Link className="group relative aspect-[3/4] overflow-hidden champagne-border-1px block" href="/services#bhangra-group">
-              <img
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                data-alt="Dynamic shot of a Punjabi Bhangra dance group performing at a high-end luxury event. Men in vibrant, embroidered traditional attire caught mid-air in a coordinated jump. The background is dark and moody, punctuated by sharp, bright spotlights. Premium, energetic, cinematic look."
+              <Image
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGIOKWxBZEeHoi0BEb9p60Xt4ynEab7SPK_nJHAUBpPChWLbDv2XemKvYFy5TztGg9O3h__GzMngxb6SsGwC0QWiBlHi2jphm0f3Bf_qD5GZR_ES6m0GQko0rK6--0y8ZSq-2C6XL9bu6P4jta-o8ywmHS9kPCA8aMCFXjeG_UT1HounMqyUcIaGY0spQsecPgs6ZbrJzihZQjGpIH0AuLG2eICYnAEVj_V-STqHRYc88nqwV8aaGT"
-                alt="Bhangra Group"
+                alt="Bhangra group performers in vibrant traditional attire mid-jump at a luxury event"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                loading="lazy"
               />
               <div className="absolute inset-0 card-scrim"></div>
               <div className="absolute inset-0 border border-primary/0 group-hover:border-primary/50 transition-colors duration-300 z-10 m-2"></div>
@@ -141,17 +169,19 @@ export default function Home() {
               <div className="absolute top-4 right-4 z-30 bg-primary text-background font-label-caps text-[10px] px-2 py-1 uppercase tracking-widest">
                 Premium
               </div>
-              <img
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                data-alt="An elegant nighttime performance scene featuring a charismatic Punjabi singer alongside a Dhol player. Sophisticated concert lighting with golden hues illuminating smoke or mist. The subjects exude professionalism and cultural richness. Cinematic, high-contrast imagery fitting a luxury event brochure."
+              <Image
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqFClQK269JyPSEIt2AuAC5M8_GsnXc1QLwh_fSWwLnPGmFmAjVmG9qXyzc7eHOdkVYTwpPISrfx49DJXzpbGwS5YjwiHjnpstf_Xk37slMFHLnFKw8ZT_yLrxHvKBcoeyByV_nubXsjO0GazUo9KlzNhApT2gyw-f1GyviMPH4w2PheXwWcKdMMUSMZmsUHrgTN6jnBMOqpVZuEQWRy1-6Wb0mMm1EjKGnn5PM_FNH3c6q5Ba7Orw"
-                alt="Dhol & Singer"
+                alt="Punjabi singer performing alongside a Dhol player at an elegant evening event with golden concert lighting"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                loading="lazy"
               />
               <div className="absolute inset-0 card-scrim"></div>
               <div className="absolute inset-0 border border-primary/0 group-hover:border-primary/50 transition-colors duration-300 z-10 m-2"></div>
               <div className="absolute bottom-0 left-0 w-full p-6 z-20 flex flex-col justify-end">
                 <h3 className="font-headline-lg text-[24px] text-[#FFFDF8] mb-2 font-display-lg tracking-wide group-hover:text-primary transition-colors">
-                  Dhol & Singer
+                  Dhol &amp; Singer
                 </h3>
                 <p className="font-body-md text-body-md text-[#EFE9DD] mb-4 line-clamp-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
                   Live vocalists paired with percussion.
@@ -163,11 +193,13 @@ export default function Home() {
             </Link>
             {/* Service Card 4 */}
             <Link className="group relative aspect-[3/4] overflow-hidden champagne-border-1px block" href="/services#led-dhol">
-              <img
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                data-alt="Modern event scene with performers playing LED illuminated dhol drums. The drums glow vibrantly against a pitch-black background, creating striking geometric light trails. A fusion of modern technology and traditional culture. High-end, futuristic nightclub aesthetic."
+              <Image
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDmDRyebMKmYRgaXFomCS-okckYZlSo0N5bYJH_vpcTOQvEJCjfy79XJO3d4jppa21860VhtLIrbISLN7KN9OkGFclWnHGtJ9vLVFywECvh_bzgFvVdZgXjpOtw-uEOOOSVLrSILrJRX-RYJIgbDLW6MUwn__xJuJ5bcV3BHnFlbVhY_JXggub4N8cAwkG15pfgrkW-yTE2eSskhRpK6NVyeF-cUMWbwG6oyKNeF635_yH_mNyOTwH"
-                alt="Punjabi LED Dhol"
+                alt="LED illuminated Dhol drums glowing vibrantly against a dark background at a night event — modern fusion performance"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                loading="lazy"
               />
               <div className="absolute inset-0 card-scrim"></div>
               <div className="absolute inset-0 border border-primary/0 group-hover:border-primary/50 transition-colors duration-300 z-10 m-2"></div>
@@ -216,25 +248,34 @@ export default function Home() {
           {/* Image Collage - Right Side */}
           <div className="grid grid-cols-2 gap-4 lg:gap-6 w-full aspect-[4/5] md:aspect-square lg:aspect-[4/5]">
             <div className="col-span-1 relative w-full h-full rounded-2xl overflow-hidden">
-              <img
-                className="absolute inset-0 w-full h-full object-cover object-center"
+              <Image
+                className="object-cover object-center"
                 src="/images/final-collage-1.webp"
-                alt="Joyous groom with Dhol player"
+                alt="Joyous groom celebrating with a Punjabi Dhol player at a grand wedding"
+                fill
+                sizes="(max-width: 768px) 50vw, 25vw"
+                loading="lazy"
               />
             </div>
             <div className="col-span-1 flex flex-col gap-4 lg:gap-6 w-full h-full">
               <div className="relative flex-1 rounded-2xl overflow-hidden">
-                <img
-                  className="absolute inset-0 w-full h-full object-cover object-center"
+                <Image
+                  className="object-cover object-center"
                   src="/images/final-collage-2.webp"
-                  alt="Close up of traditional Dhol"
+                  alt="Close-up of traditional carved Punjabi Dhol drum"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  loading="lazy"
                 />
               </div>
               <div className="relative flex-1 rounded-2xl overflow-hidden">
-                <img
-                  className="absolute inset-0 w-full h-full object-cover object-center"
+                <Image
+                  className="object-cover object-center"
                   src="/images/final-collage-3.webp"
-                  alt="Bhangra dancers performing"
+                  alt="Bhangra dancers performing in vibrant traditional costumes at an event"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  loading="lazy"
                 />
               </div>
             </div>
