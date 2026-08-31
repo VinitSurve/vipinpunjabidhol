@@ -55,7 +55,7 @@ export default function Navbar() {
           </Link>
           <a
             className="font-cta text-cta flex items-center gap-2 bg-surface-container text-on-background border border-on-background px-6 py-3 transition-colors hover:bg-surface-variant uppercase tracking-widest hidden xl:flex"
-            href="https://wa.me/917206110529"
+            href="https://wa.me/917206110529?text=Hi%2C%20I%20want%20to%20enquire%20about%20booking%20Vipin%20Punjabi%20Dhol%20for%20an%20event"
             aria-label="Contact Vipin Punjabi Dhol & Events on WhatsApp"
             rel="noopener noreferrer"
             target="_blank"
@@ -117,7 +117,7 @@ export default function Navbar() {
             
             <div className="w-full border-t border-[#B58A3A]/20 mt-4 pt-8 flex flex-col gap-6">
               <a
-                href="https://wa.me/917206110529"
+                href="https://wa.me/917206110529?text=Hi%2C%20I%20want%20to%20enquire%20about%20booking%20Vipin%20Punjabi%20Dhol%20for%20an%20event"
                 className="font-label-caps text-sm uppercase tracking-widest text-[#FFFDF8] hover:text-[#B58A3A] flex items-center gap-3 transition-colors"
                 aria-label="Contact Vipin Punjabi Dhol & Events on WhatsApp"
                 rel="noopener noreferrer"

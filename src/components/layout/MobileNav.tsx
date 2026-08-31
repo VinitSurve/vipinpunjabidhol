@@ -18,7 +18,7 @@ export default function MobileNav() {
       </a>
       <a
         className="flex flex-col items-center justify-center text-on-surface-variant active:bg-secondary-container w-full h-full transition-colors rounded-lg p-2 active:scale-110 transform duration-200 border-x border-surface/20"
-        href="https://wa.me/917206110529"
+        href="https://wa.me/917206110529?text=Hi%2C%20I%20want%20to%20enquire%20about%20booking%20Vipin%20Punjabi%20Dhol%20for%20an%20event"
       >
         <WhatsAppIcon className="w-6 h-6 mb-1" />
         <span className="font-label-caps text-label-caps" style={{ fontSize: "10px" }}>

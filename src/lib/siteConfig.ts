@@ -17,7 +17,7 @@ export const SITE_DESCRIPTION =
 export const BUSINESS_INFO = {
   name: "Vipin Punjabi Dhol & Events",
   phone: "+91 7206110529",
-  whatsapp: "https://wa.me/917206110529",
+  whatsapp: "https://wa.me/917206110529?text=Hi%2C%20I%20want%20to%20enquire%20about%20booking%20Vipin%20Punjabi%20Dhol%20for%20an%20event",
   instagram: "https://www.instagram.com/vipin_dhol_events_",
   address: {
     streetAddress: "Kharghar",

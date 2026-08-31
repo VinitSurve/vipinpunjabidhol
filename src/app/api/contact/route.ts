@@ -16,6 +16,20 @@ function escapeHtml(unsafe: string) {
     .replace(/'/g, "&#039;");
 }
 
+function formatWhatsAppNumber(phone: string): string {
+  let cleanNumber = (phone || "").replace(/[^\d+]/g, '');
+  if (cleanNumber.startsWith('+')) {
+    cleanNumber = cleanNumber.substring(1);
+  }
+  if (cleanNumber.startsWith('0')) {
+    cleanNumber = cleanNumber.replace(/^0+/, '');
+  }
+  if (cleanNumber.length === 10) {
+    return `91${cleanNumber}`;
+  }
+  return cleanNumber;
+}
+
 // Best-effort in-memory rate limiting (clears on function cold start)
 // Not a production-grade distributed rate limiter, but serves as a basic shield
 const rateLimitMap = new Map<string, { count: number; timestamp: number }>();
@@ -198,6 +212,7 @@ const spreadsheetId = process.env.GOOGLE_SHEET_ID;
       try {
         let subjectStr = "";
         let htmlBody = "";
+        let waMessage = "";
 
         const safeName = escapeHtml(name);
         const safePhone = escapeHtml(phone);
@@ -213,6 +228,7 @@ const spreadsheetId = process.env.GOOGLE_SHEET_ID;
             <p><strong>Status:</strong> NEW</p>
             <p><strong>Timestamp:</strong> ${timestamp}</p>
           `;
+          waMessage = `Hi ${name}, this is Vipin Punjabi Dhol. We received your Ganpati enquiry and wanted to follow up with you! (Date: ${date} | Experience: ${experience})`;
         } else if (formType === "general") {
           subjectStr = `New General Enquiry — ${name}`;
           htmlBody = `
@@ -225,6 +241,7 @@ const spreadsheetId = process.env.GOOGLE_SHEET_ID;
             <p><strong>Status:</strong> NEW</p>
             <p><strong>Timestamp:</strong> ${timestamp}</p>
           `;
+          waMessage = `Hi ${name}, this is Vipin Punjabi Dhol. We received your enquiry regarding ${subject} and wanted to follow up with you! (Message: ${message || "Not provided"})`;
         } else if (formType === "booking") {
           subjectStr = `New Booking Request — ${name}`;
           htmlBody = `
@@ -240,7 +257,17 @@ const spreadsheetId = process.env.GOOGLE_SHEET_ID;
             <p><strong>Status:</strong> NEW</p>
             <p><strong>Timestamp:</strong> ${timestamp}</p>
           `;
+          waMessage = `Hi ${name}, this is Vipin Punjabi Dhol. We received your booking request and wanted to follow up with you! (Event: ${type} | Date: ${date} | Location: ${location} | Guests: ${guests} | Experience: ${experience} | Details: ${details || "None"})`;
         }
+
+        const customerWaNumber = formatWhatsAppNumber(phone);
+        const waUrl = `https://wa.me/${customerWaNumber}?text=${encodeURIComponent(waMessage)}`;
+        
+        htmlBody += `
+          <div style="margin-top: 30px;">
+            <a href="${waUrl}" style="background-color: #25D366; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; display: inline-block; font-family: sans-serif;">Reply on WhatsApp</a>
+          </div>
+        `;
 
         const { error: resendError } = await resend.emails.send({
           from: "Vipin Punjabi Dhol <onboarding@resend.dev>",

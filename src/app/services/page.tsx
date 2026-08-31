@@ -385,7 +385,7 @@ export default function ServicesPage() {
                 BOOK YOUR DATE <span className="material-symbols-outlined align-middle text-[14px] ml-2">arrow_forward</span>
               </Link>
               <a
-                href="https://wa.me/917206110529"
+                href="https://wa.me/917206110529?text=Hi%2C%20I%20want%20to%20enquire%20about%20booking%20Vipin%20Punjabi%20Dhol%20for%20an%20event"
                 className="bg-transparent border border-[#B58A3A] text-[#B58A3A] px-8 py-4 font-bold text-[12px] tracking-[0.15em] uppercase hover:bg-[#B58A3A]/10 transition-all duration-300 flex-1 flex items-center justify-center gap-2 whitespace-nowrap"
               >
                 <WhatsAppIcon className="w-5 h-5" /> WHATSAPP US

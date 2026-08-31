@@ -145,7 +145,7 @@ export default function ContactPage() {
               </p>
               <a
                 className="mt-4 text-[12px] font-bold bg-transparent text-[#B58A3A] border border-[#B58A3A] px-4 py-4 hover:bg-[#B58A3A]/10 transition-all duration-300 w-full flex flex-nowrap items-center justify-center gap-2 whitespace-nowrap tracking-[0.15em] uppercase"
-                href="https://wa.me/917206110529"
+                href="https://wa.me/917206110529?text=Hi%2C%20I%20want%20to%20enquire%20about%20booking%20Vipin%20Punjabi%20Dhol%20for%20an%20event"
               >
                 <WhatsAppIcon className="w-5 h-5" /> WHATSAPP US
               </a>

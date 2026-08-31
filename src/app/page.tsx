@@ -42,7 +42,7 @@ export default function Home() {
             </Link>
             <a
               className="font-cta text-cta flex items-center justify-center gap-2 bg-surface-container text-primary border border-primary px-8 py-4 hover:bg-surface-variant transition-colors w-full sm:w-auto text-center tracking-widest uppercase"
-              href="https://wa.me/917206110529"
+              href="https://wa.me/917206110529?text=Hi%2C%20I%20want%20to%20enquire%20about%20booking%20Vipin%20Punjabi%20Dhol%20for%20an%20event"
             >
               <WhatsAppIcon className="w-6 h-6" />
               WHATSAPP US
