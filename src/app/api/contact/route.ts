@@ -106,8 +106,8 @@ export async function POST(req: Request) {
         ],
       ];
     } else if (formType === "general") {
-      if (!subject || !message) {
-        return NextResponse.json({ error: "Subject and message are required for general enquiries" }, { status: 400 });
+      if (!subject) {
+        return NextResponse.json({ error: "Subject is required for general enquiries" }, { status: 400 });
       }
       range = `'${SHEETS.general}'!A:G`;
       values = [
@@ -117,7 +117,7 @@ export async function POST(req: Request) {
           phone,
           email || "",
           subject,
-          message,
+          message || "",
           status,
         ],
       ];

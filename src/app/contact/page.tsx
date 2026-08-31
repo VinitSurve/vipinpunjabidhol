@@ -229,9 +229,9 @@ export default function ContactPage() {
                   <label className="text-[11px] font-semibold tracking-[0.15em] uppercase text-on-surface-variant">Subject</label>
                   <CustomSelect
                     options={[
-                      { value: "general", label: "General Information" },
-                      { value: "services", label: "Services & Pricing" },
-                      { value: "other", label: "Other" },
+                      { value: "General Information", label: "General Information" },
+                      { value: "Services & Pricing", label: "Services & Pricing" },
+                      { value: "Other", label: "Other" },
                     ]}
                     value={enquiryForm.subject}
                     onChange={(val) => setEnquiryForm({ ...enquiryForm, subject: val })}
@@ -242,9 +242,8 @@ export default function ContactPage() {
               </div>
 
               <div className="flex flex-col gap-2 mb-2">
-                <label className="text-[11px] font-semibold tracking-[0.15em] uppercase text-on-surface-variant">Message</label>
+                <label className="text-[11px] font-semibold tracking-[0.15em] uppercase text-on-surface-variant">Message (Optional)</label>
                 <textarea
-                  required
                   rows={4}
                   placeholder="How can we help?"
                   value={enquiryForm.message}
@@ -339,10 +338,10 @@ export default function ContactPage() {
                   <label className="text-[11px] font-semibold tracking-[0.15em] uppercase text-on-surface-variant">Event Type</label>
                   <CustomSelect
                     options={[
-                      { value: "wedding", label: "Wedding / Baraat" },
-                      { value: "corporate", label: "Corporate Event" },
-                      { value: "festival", label: "Festival" },
-                      { value: "other", label: "Other" },
+                      { value: "Wedding / Baraat", label: "Wedding / Baraat" },
+                      { value: "Corporate Event", label: "Corporate Event" },
+                      { value: "Festival", label: "Festival" },
+                      { value: "Other", label: "Other" },
                     ]}
                     value={bookingForm.type}
                     onChange={(val) => setBookingForm({ ...bookingForm, type: val })}
@@ -419,7 +418,7 @@ export default function ContactPage() {
 
               {/* SECTION: ADDITIONAL DETAILS */}
               <div className="border-b border-secondary/20 pb-2 mt-2 mb-1">
-                <span className="text-[10px] font-bold text-primary tracking-[0.2em] uppercase">ADDITIONAL DETAILS</span>
+                <span className="text-[10px] font-bold text-primary tracking-[0.2em] uppercase">ADDITIONAL DETAILS (OPTIONAL)</span>
               </div>
 
               <div className="flex flex-col gap-2">
