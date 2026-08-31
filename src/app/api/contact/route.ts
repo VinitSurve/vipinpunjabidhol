@@ -142,20 +142,33 @@ export async function POST(req: Request) {
       ];
     }
 
-    // 4. Authentication (OIDC -> Google WIF)
-    const auth = ExternalAccountClient.fromJSON({
-      type: "external_account",
-      audience: `//iam.googleapis.com/projects/${process.env.GCP_PROJECT_NUMBER}/locations/global/workloadIdentityPools/${process.env.GCP_WORKLOAD_IDENTITY_POOL_ID}/providers/${process.env.GCP_WORKLOAD_IDENTITY_POOL_PROVIDER_ID}`,
-      subject_token_type: "urn:ietf:params:oauth:token-type:jwt",
-      token_url: "https://sts.googleapis.com/v1/token",
-      service_account_impersonation_url: `https://iamcredentials.googleapis.com/v1/projects/-/serviceAccounts/${process.env.GCP_SERVICE_ACCOUNT_EMAIL}:generateAccessToken`,
-      subject_token_supplier: {
-        getSubjectToken: getVercelOidcToken,
-      },
-    });
+    // 4. Authentication (Vercel OIDC -> Google Workload Identity Federation)
+const auth = ExternalAccountClient.fromJSON({
+  type: "external_account",
 
-    const sheets = google.sheets({ version: "v4", auth: auth as any });
-    const spreadsheetId = process.env.GOOGLE_SHEET_ID;
+  audience: `//iam.googleapis.com/projects/${process.env.GCP_PROJECT_NUMBER}/locations/global/workloadIdentityPools/${process.env.GCP_WORKLOAD_IDENTITY_POOL_ID}/providers/${process.env.GCP_WORKLOAD_IDENTITY_POOL_PROVIDER_ID}`,
+
+  subject_token_type: "urn:ietf:params:oauth:token-type:jwt",
+
+  token_url: "https://sts.googleapis.com/v1/token",
+
+  service_account_impersonation_url: `https://iamcredentials.googleapis.com/v1/projects/-/serviceAccounts/${process.env.GCP_SERVICE_ACCOUNT_EMAIL}:generateAccessToken`,
+
+  scopes: [
+    "https://www.googleapis.com/auth/spreadsheets",
+  ],
+
+  subject_token_supplier: {
+    getSubjectToken: getVercelOidcToken,
+  },
+});
+
+const sheets = google.sheets({
+  version: "v4",
+  auth: auth as any,
+});
+
+const spreadsheetId = process.env.GOOGLE_SHEET_ID;
 
     // 5. Google Sheets API Call
     await sheets.spreadsheets.values.append({
