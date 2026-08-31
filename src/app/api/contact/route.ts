@@ -2,6 +2,19 @@ import { NextResponse } from "next/server";
 import { getVercelOidcToken } from "@vercel/oidc";
 import { ExternalAccountClient } from "google-auth-library";
 import { google } from "googleapis";
+import { Resend } from "resend";
+
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
+const OWNER_EMAIL = process.env.OWNER_EMAIL;
+
+function escapeHtml(unsafe: string) {
+  return (unsafe || "").toString()
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
 
 // Best-effort in-memory rate limiting (clears on function cold start)
 // Not a production-grade distributed rate limiter, but serves as a basic shield
@@ -179,6 +192,74 @@ const spreadsheetId = process.env.GOOGLE_SHEET_ID;
         values,
       },
     });
+
+    // 6. Send Email Notification (Best Effort)
+    if (resend && OWNER_EMAIL) {
+      try {
+        let subjectStr = "";
+        let htmlBody = "";
+
+        const safeName = escapeHtml(name);
+        const safePhone = escapeHtml(phone);
+
+        if (formType === "ganpati") {
+          subjectStr = `New Ganpati Enquiry — ${name}`;
+          htmlBody = `
+            <h2>New Ganpati Enquiry</h2>
+            <p><strong>Name:</strong> ${safeName}</p>
+            <p><strong>Phone:</strong> ${safePhone}</p>
+            <p><strong>Date:</strong> ${escapeHtml(date)}</p>
+            <p><strong>Experience:</strong> ${escapeHtml(experience)}</p>
+            <p><strong>Status:</strong> NEW</p>
+            <p><strong>Timestamp:</strong> ${timestamp}</p>
+          `;
+        } else if (formType === "general") {
+          subjectStr = `New General Enquiry — ${name}`;
+          htmlBody = `
+            <h2>New General Enquiry</h2>
+            <p><strong>Name:</strong> ${safeName}</p>
+            <p><strong>Phone:</strong> ${safePhone}</p>
+            <p><strong>Email:</strong> ${email ? escapeHtml(email) : "Not provided"}</p>
+            <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
+            <p><strong>Message:</strong> ${message ? escapeHtml(message) : "Not provided"}</p>
+            <p><strong>Status:</strong> NEW</p>
+            <p><strong>Timestamp:</strong> ${timestamp}</p>
+          `;
+        } else if (formType === "booking") {
+          subjectStr = `New Booking Request — ${name}`;
+          htmlBody = `
+            <h2>New Booking Request</h2>
+            <p><strong>Name:</strong> ${safeName}</p>
+            <p><strong>Phone:</strong> ${safePhone}</p>
+            <p><strong>Date:</strong> ${escapeHtml(date)}</p>
+            <p><strong>Event Type:</strong> ${escapeHtml(type)}</p>
+            <p><strong>Location:</strong> ${escapeHtml(location)}</p>
+            <p><strong>Guests:</strong> ${escapeHtml(guests)}</p>
+            <p><strong>Experience:</strong> ${escapeHtml(experience)}</p>
+            <p><strong>Additional Details:</strong> ${details ? escapeHtml(details) : "Not provided"}</p>
+            <p><strong>Status:</strong> NEW</p>
+            <p><strong>Timestamp:</strong> ${timestamp}</p>
+          `;
+        }
+
+        const { error: resendError } = await resend.emails.send({
+          from: "Vipin Punjabi Dhol <onboarding@resend.dev>",
+          to: [OWNER_EMAIL],
+          subject: subjectStr,
+          html: htmlBody,
+        });
+
+        if (resendError) {
+          console.error("Resend API failed to send email:", resendError);
+        } else {
+          console.log(`Email notification sent successfully for ${formType}`);
+        }
+      } catch (emailErr) {
+        console.error("Error generating or sending email notification:", emailErr);
+      }
+    } else {
+      console.warn("RESEND_API_KEY or OWNER_EMAIL is missing. Email notification skipped.");
+    }
 
     return NextResponse.json({ success: true, message: "Form submitted successfully" });
   } catch (error: any) {
