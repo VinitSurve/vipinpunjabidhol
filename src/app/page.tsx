@@ -21,6 +21,30 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const testimonials = [
+    {
+      id: 1,
+      name: "Arjun Mehta",
+      event: "Wedding Celebration · Mumbai",
+      text: "Absolutely loved the energy and professionalism. The dhol team made our wedding entry unforgettable and kept the entire crowd dancing.",
+      rating: 5,
+    },
+    {
+      id: 2,
+      name: "Simran Kaur",
+      event: "Ganpati Celebration · Navi Mumbai",
+      text: "The beats, energy and overall performance were amazing. They brought such a great vibe to our Ganpati celebration.",
+      rating: 5,
+    },
+    {
+      id: 3,
+      name: "Rohan Sharma",
+      event: "Corporate Celebration · Mumbai",
+      text: "Very professional team and fantastic performance. The energy was incredible and they really made the event memorable.",
+      rating: 5,
+    },
+  ];
+
   return (
     <>
       <main className="flex-grow flex flex-col pt-0">
@@ -220,6 +244,48 @@ export default function Home() {
             <Link className="btn-ghost group" href="/services">
               VIEW ALL SERVICES <span className="material-symbols-outlined ml-2">arrow_forward</span>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Testimonials / Social Proof */}
+      <section className="w-full py-section-gap bg-surface-container">
+        <div className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+          <div className="flex flex-col items-center text-center mb-12 md:mb-16 max-w-2xl mx-auto">
+            <span className="font-label-caps text-label-caps text-primary mb-4 tracking-[0.15em] uppercase block">
+              THE ENERGY SPEAKS
+            </span>
+            <h2 className="font-headline-lg text-headline-lg text-on-surface uppercase leading-tight">
+              LOVED BY THE CROWD
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {testimonials.map((testimonial) => (
+              <div 
+                key={testimonial.id} 
+                className="bg-background border border-[#B58A3A]/20 p-8 md:p-10 flex flex-col justify-between group hover:border-[#B58A3A]/50 transition-colors duration-500"
+              >
+                <div>
+                  <div className="flex text-primary mb-6 text-[16px] tracking-widest">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <span key={i}>&#9733;</span>
+                    ))}
+                  </div>
+                  <p className="font-body-lg text-body-lg text-on-surface mb-8 font-light leading-relaxed">
+                    &ldquo;{testimonial.text}&rdquo;
+                  </p>
+                </div>
+                <div className="border-t border-[#B58A3A]/20 pt-6 mt-auto">
+                  <p className="font-label-caps text-label-caps text-on-surface uppercase tracking-widest mb-1">
+                    {testimonial.name}
+                  </p>
+                  <p className="font-body-md text-[12px] text-on-surface-variant uppercase tracking-wider">
+                    {testimonial.event}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
