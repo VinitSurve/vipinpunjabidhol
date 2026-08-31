@@ -15,6 +15,7 @@ export default function ContactPage() {
     email: "",
     subject: "",
     message: "",
+    _honeypot: "",
   });
 
   const [bookingForm, setBookingForm] = useState({
@@ -26,18 +27,67 @@ export default function ContactPage() {
     guests: "",
     experience: "",
     details: "",
+    _honeypot: "",
   });
 
-  const handleEnquirySubmit = (e: React.FormEvent) => {
+  const [isSubmittingEnquiry, setIsSubmittingEnquiry] = useState(false);
+  const [enquiryStatus, setEnquiryStatus] = useState<{ type: "success" | "error"; message: string } | null>(null);
+
+  const [isSubmittingBooking, setIsSubmittingBooking] = useState(false);
+  const [bookingStatus, setBookingStatus] = useState<{ type: "success" | "error"; message: string } | null>(null);
+
+  const handleEnquirySubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Submitting General Enquiry:", enquiryForm);
-    alert("Enquiry form submitted. We will connect this to Google Sheets shortly.");
+    setIsSubmittingEnquiry(true);
+    setEnquiryStatus(null);
+    
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ formType: "enquiry", ...enquiryForm }),
+      });
+      
+      const data = await res.json();
+      
+      if (!res.ok) {
+        throw new Error(data.error || "Failed to submit enquiry");
+      }
+      
+      setEnquiryStatus({ type: "success", message: "Thank you! We have received your enquiry." });
+      setEnquiryForm({ name: "", phone: "", email: "", subject: "", message: "", _honeypot: "" });
+    } catch (error: any) {
+      setEnquiryStatus({ type: "error", message: error.message || "Something went wrong. Please try again." });
+    } finally {
+      setIsSubmittingEnquiry(false);
+    }
   };
 
-  const handleBookingSubmit = (e: React.FormEvent) => {
+  const handleBookingSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Submitting Booking Request:", bookingForm);
-    alert("Booking request submitted. We will connect this to Google Sheets shortly.");
+    setIsSubmittingBooking(true);
+    setBookingStatus(null);
+    
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ formType: "booking", ...bookingForm }),
+      });
+      
+      const data = await res.json();
+      
+      if (!res.ok) {
+        throw new Error(data.error || "Failed to submit booking request");
+      }
+      
+      setBookingStatus({ type: "success", message: "Booking request received! We'll contact you shortly." });
+      setBookingForm({ name: "", phone: "", date: "", type: "", location: "", guests: "", experience: "", details: "", _honeypot: "" });
+    } catch (error: any) {
+      setBookingStatus({ type: "error", message: error.message || "Something went wrong. Please try again." });
+    } finally {
+      setIsSubmittingBooking(false);
+    }
   };
 
   return (
@@ -137,6 +187,8 @@ export default function ContactPage() {
 
             <form onSubmit={handleEnquirySubmit} className="flex flex-col gap-8">
               
+              <input type="text" name="_honeypot" style={{ display: "none" }} value={enquiryForm._honeypot || ""} onChange={(e) => setEnquiryForm({ ...enquiryForm, _honeypot: e.target.value })} tabIndex={-1} autoComplete="off" />
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
                 <div className="flex flex-col gap-2">
                   <label className="text-[11px] font-semibold tracking-[0.15em] uppercase text-on-surface-variant">Full Name</label>
@@ -202,12 +254,18 @@ export default function ContactPage() {
               </div>
 
               <div className="pt-4">
+                {enquiryStatus && (
+                  <div className={`p-4 mb-4 text-[13px] font-medium border ${enquiryStatus.type === 'success' ? 'bg-green-500/10 border-green-500/20 text-green-700' : 'bg-red-500/10 border-red-500/20 text-red-700'}`}>
+                    {enquiryStatus.message}
+                  </div>
+                )}
                 <button
                   type="submit"
-                  className="w-full bg-[#171513] text-[#FFFDF8] hover:bg-[#B58A3A] transition-colors py-4 text-[12px] font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-3 group mb-4"
+                  disabled={isSubmittingEnquiry}
+                  className="w-full bg-[#171513] text-[#FFFDF8] hover:bg-[#B58A3A] disabled:bg-[#171513]/50 transition-colors py-4 text-[12px] font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-3 group mb-4"
                 >
-                  SEND ENQUIRY
-                  <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                  {isSubmittingEnquiry ? "SENDING..." : "SEND ENQUIRY"}
+                  {!isSubmittingEnquiry && <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>}
                 </button>
                 <div className="flex items-center justify-center gap-2 text-on-surface-variant/70">
                   <span className="material-symbols-outlined text-[14px]">shield_person</span>
@@ -229,6 +287,8 @@ export default function ContactPage() {
 
             <form onSubmit={handleBookingSubmit} className="flex flex-col gap-8">
               
+              <input type="text" name="_honeypot" style={{ display: "none" }} value={bookingForm._honeypot || ""} onChange={(e) => setBookingForm({ ...bookingForm, _honeypot: e.target.value })} tabIndex={-1} autoComplete="off" />
+
               {/* SECTION: YOUR DETAILS */}
               <div className="border-b border-secondary/20 pb-2 mb-1">
                 <span className="text-[10px] font-bold text-primary tracking-[0.2em] uppercase">YOUR DETAILS</span>
@@ -373,12 +433,18 @@ export default function ContactPage() {
               </div>
 
               <div className="pt-4">
+                {bookingStatus && (
+                  <div className={`p-4 mb-4 text-[13px] font-medium border ${bookingStatus.type === 'success' ? 'bg-green-500/10 border-green-500/20 text-green-700' : 'bg-red-500/10 border-red-500/20 text-red-700'}`}>
+                    {bookingStatus.message}
+                  </div>
+                )}
                 <button
                   type="submit"
-                  className="w-full bg-[#171513] text-[#FFFDF8] hover:bg-[#B58A3A] transition-colors py-4 text-[12px] font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-3 group mb-4"
+                  disabled={isSubmittingBooking}
+                  className="w-full bg-[#171513] text-[#FFFDF8] hover:bg-[#B58A3A] disabled:bg-[#171513]/50 transition-colors py-4 text-[12px] font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-3 group mb-4"
                 >
-                  SUBMIT BOOKING REQUEST
-                  <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                  {isSubmittingBooking ? "SUBMITTING..." : "SUBMIT BOOKING REQUEST"}
+                  {!isSubmittingBooking && <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>}
                 </button>
                 
                 <div className="flex flex-col items-center gap-1 text-center">
