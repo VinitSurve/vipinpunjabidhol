@@ -94,7 +94,7 @@ export async function POST(req: Request) {
       if (!date || !experience) {
         return NextResponse.json({ error: "Date and experience are required for Ganpati bookings" }, { status: 400 });
       }
-      range = `${SHEETS.ganpati}!A:F`;
+      range = `'${SHEETS.ganpati}'!A:F`;
       values = [
         [
           timestamp,
@@ -109,7 +109,7 @@ export async function POST(req: Request) {
       if (!subject || !message) {
         return NextResponse.json({ error: "Subject and message are required for general enquiries" }, { status: 400 });
       }
-      range = `${SHEETS.general}!A:G`;
+      range = `'${SHEETS.general}'!A:G`;
       values = [
         [
           timestamp,
@@ -125,7 +125,7 @@ export async function POST(req: Request) {
       if (!date || !type || !location || !guests || !experience) {
         return NextResponse.json({ error: "Please fill all required booking fields" }, { status: 400 });
       }
-      range = `${SHEETS.booking}!A:J`;
+      range = `'${SHEETS.booking}'!A:J`;
       values = [
         [
           timestamp,
