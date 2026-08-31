@@ -10,8 +10,8 @@ const RATE_LIMIT_WINDOW_MS = 60000; // 1 minute
 const MAX_REQUESTS_PER_WINDOW = 5; // 5 requests per IP per minute
 
 const SHEETS = {
-  ganpati: "Ganpati Enquiries",
-  general: "General Enquiries",
+  ganpati: "Ganpati Enquiries ",
+  general: "General Enquiries ",
   booking: "Booking Requests",
 };
 
